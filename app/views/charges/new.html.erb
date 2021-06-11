@@ -1,0 +1,51 @@
+
+  <body class="text-center">
+  <div class="form-signin">
+    <h2>Make Payment</h2>
+  </div>
+
+  <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+          <div class="field">
+            <label>
+              <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <input type="text" data-stripe="cvc" class="card-fields" width="100%" placeholder="CVC"/>
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <input type="text" size="2" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+            </label>
+              <input type="text" size="4" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+          </div>
+          <div class="field">
+            <label>
+              <input type="text" id="amount" class="card-fields" placeholder="Amount"/>
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <input type="text" id="name" class="card-fields" placeholder="Name"/>
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <input type="text" id="email" class="card-fields" placeholder="Email"/>
+            </label>
+          </div>
+        <div class="actions">
+        <button type="submit">Submit Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</body>
+
+
