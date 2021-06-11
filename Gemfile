@@ -24,6 +24,9 @@ gem "httparty"
 gem 'stripe-rails'
 gem 'jquery-turbolinks'
 
+gem 'dotenv-rails'
+gem 'faraday'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
@@ -31,6 +34,8 @@ gem 'jquery-ui-rails', '5.0.5'
 
 gem 'activeadmin'
 gem 'bootstrap', '~> 4.0.0'
+
+gem 'rack-cors'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

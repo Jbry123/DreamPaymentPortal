@@ -1,0 +1,2471 @@
+  [1m[35m (288.2ms)[0m  [1m[35mCREATE DATABASE "restaurants_app_development" ENCODING = 'utf8'[0m
+  [1m[35m (233.2ms)[0m  [1m[35mCREATE DATABASE "restaurants_app_test" ENCODING = 'utf8'[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20210422074114)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210208064252)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210208064252"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStripeUserIdToUsers (20210217070106)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "stripe_user_id" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210217070106"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdminUsers (20210405132913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405132913"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20210405132917)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" bigserial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" bigint, "author_type" character varying, "author_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405132917"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCredentials (20210405134748)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "credentials" ("id" bigserial primary key, "secret_key" character varying, "publishable_key" character varying, "client_id" character varying, "percentage_amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405134748"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-22 07:43:16.205637"], ["updated_at", "2021-04-22 07:43:16.205637"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (107.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "restaurants_app_development"[0m
+  [1m[35m (106.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "restaurants_app_test"[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (236.7ms)[0m  [1m[35mCREATE DATABASE "restaurants_app_development" ENCODING = 'utf8'[0m
+  [1m[35m (253.4ms)[0m  [1m[35mCREATE DATABASE "restaurants_app_test" ENCODING = 'utf8'[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210208064252)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210208064252"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStripeUserIdToUsers (20210217070106)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "stripe_user_id" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210217070106"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdminUsers (20210405132913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405132913"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20210405132917)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" bigserial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" bigint, "author_type" character varying, "author_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405132917"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCredentials (20210405134748)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "credentials" ("id" bigserial primary key, "secret_key" character varying, "publishable_key" character varying, "client_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210405134748"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-22 07:44:10.924313"], ["updated_at", "2021-04-22 07:44:10.924313"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-04-22 12:49:50 +0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+  
+NoMethodError (undefined method `secret_key' for nil:NilClass):
+  
+app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+app/controllers/payments_controller.rb:1:in `<main>'
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCredential Create (0.5ms)[0m  [1m[32mINSERT INTO "credentials" ("secret_key", "publishable_key", "client_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["secret_key", "test"], ["publishable_key", "test"], ["client_id", "test"], ["created_at", "2021-04-22 07:52:01.569811"], ["updated_at", "2021-04-22 07:52:01.569811"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2021-04-22 12:52:07 +0500
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 663)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-22 12:52:07 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2914)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/restaurants-app/public/packs
+[Webpacker] Hash: ef270c56fa66020c9089
+Version: webpack 4.46.0
+Time: 3215ms
+Built at: 04/22/2021 12:52:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e88c6c3304a15e6886b6.js    124 KiB  application  [emitted] [immutable]  application
+js/application-e88c6c3304a15e6886b6.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e88c6c3304a15e6886b6.js js/application-e88c6c3304a15e6886b6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 14923ms (Views: 14901.5ms | ActiveRecord: 3.3ms | Allocations: 162802)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-04-24 14:59:04 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms | Allocations: 797)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-24 14:59:04 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2421)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 90.1ms | ActiveRecord: 12.3ms | Allocations: 36271)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-24 14:59:07 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 10177)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-24 14:59:13 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 10178)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-24 14:59:16 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 10176)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <main> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToAdminUsers (20210425113923)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "admin_users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAdminUser Load (2.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (2.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$12$H94ezBDl88Ised0CqgRFTufTVE.xwJVk8F3g4rT/tpsnsiKNoo28S"], ["created_at", "2021-04-25 11:42:38.943269"], ["updated_at", "2021-04-25 11:42:38.943269"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFullNameToUsers (20210426053330)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "users" ADD "full_name" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210426053330"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(605291495105335815)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPercentageShareToUsers (20210426053420)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.5ms)[0m  [1m[35mALTER TABLE "users" ADD "percentage_share" integer DEFAULT 10[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210426053420"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(605291495105335815)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-04-26 10:40:40 +0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCredential Load (1.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:40:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 455)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 1992ms (Views: 1961.8ms | ActiveRecord: 7.1ms | Allocations: 183197)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 10:40:45 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.8ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 112)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.4ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.4ms | Allocations: 12594)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 10:41:23 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 402)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.8ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.8ms | Allocations: 14039)
+
+
+Started POST "/users" for ::1 at 2021-04-26 10:41:54 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Usman Ghani", "email"=>"usman.ghani720@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :full_name[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "usman.ghani720@gmail.com"], ["encrypted_password", "$2a$12$RjKE4Vuy8.cBWqQ0BpokD.8glognjrrh0L1xUDc.3b6yFK2GL9Jm2"], ["created_at", "2021-04-26 05:41:54.356062"], ["updated_at", "2021-04-26 05:41:54.356062"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 366ms (ActiveRecord: 4.9ms | Allocations: 11450)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:41:54 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 897ms (ActiveRecord: 0.3ms | Allocations: 3513)
+
+
+  
+Stripe::AuthenticationError (Invalid API Key provided: test):
+  
+app/controllers/payments_controller.rb:10:in `new'
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/admin/login" for ::1 at 2021-04-26 10:43:51 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 1.3ms | Allocations: 561)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 20.8ms | Allocations: 8770)
+Completed 200 OK in 350ms (Views: 296.6ms | ActiveRecord: 4.6ms | Allocations: 85294)
+
+
+Started POST "/admin/login" for ::1 at 2021-04-26 10:43:55 +0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (8.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 287ms (ActiveRecord: 8.1ms | Allocations: 4666)
+
+
+Started GET "/admin" for ::1 at 2021-04-26 10:43:56 +0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 31.9ms | Allocations: 16983)
+Completed 200 OK in 41ms (Views: 33.5ms | ActiveRecord: 0.3ms | Allocations: 21201)
+
+
+Started GET "/admin/credentials" for ::1 at 2021-04-26 10:43:58 +0500
+Processing by Admin::CredentialsController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "credentials" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "credentials" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "credentials"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "credentials" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 102.2ms | Allocations: 47204)
+Completed 200 OK in 124ms (Views: 106.2ms | ActiveRecord: 5.4ms | Allocations: 51710)
+
+
+Started GET "/admin/credentials/1/edit" for ::1 at 2021-04-26 10:44:05 +0500
+Processing by Admin::CredentialsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCredential Load (2.2ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" WHERE "credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Credential Load (0.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" WHERE "credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/edit.html.arb (Duration: 171.1ms | Allocations: 24539)
+Completed 200 OK in 204ms (Views: 183.1ms | ActiveRecord: 2.7ms | Allocations: 29025)
+
+
+Started PATCH "/admin/credentials/1" for ::1 at 2021-04-26 10:45:14 +0500
+Processing by Admin::CredentialsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "credential"=>{"client_id"=>" ca_GNMJI68nk1rDCZHkkRQJ2ElN4RUdeUlZ", "secret_key"=>"[FILTERED]", "publishable_key"=>"[FILTERED]"}, "commit"=>"Update Credential", "id"=>"1"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCredential Load (0.7ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" WHERE "credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCredential Update (0.5ms)[0m  [1m[33mUPDATE "credentials" SET "client_id" = $1, "secret_key" = $2, "publishable_key" = $3, "updated_at" = $4 WHERE "credentials"."id" = $5[0m  [["client_id", " ca_GNMJI68nk1rDCZHkkRQJ2ElN4RUdeUlZ"], ["secret_key", "sk_test_P9ZSzx6MHQxlxqRd1ZyMOKwZ"], ["publishable_key", "pk_test_ALPHtS20X3sl0klNKgknTcgQ"], ["updated_at", "2021-04-26 05:45:14.407808"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/credentials/1
+Completed 302 Found in 31ms (ActiveRecord: 3.3ms | Allocations: 12746)
+
+
+Started GET "/admin/credentials/1" for ::1 at 2021-04-26 10:45:14 +0500
+Processing by Admin::CredentialsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCredential Load (0.7ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" WHERE "credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = $2 AND "active_admin_comments"."namespace" = $3[0m  [["resource_type", "Credential"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = $2 AND "active_admin_comments"."namespace" = $3 LIMIT $4 OFFSET $5[0m  [["resource_type", "Credential"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb (Duration: 93.9ms | Allocations: 34915)
+Completed 200 OK in 107ms (Views: 91.9ms | ActiveRecord: 5.9ms | Allocations: 39282)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:46:05 +0500
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2855ms (Views: 25.2ms | ActiveRecord: 5.9ms | Allocations: 37500)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:48:01 +0500
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2582ms (Views: 61.1ms | ActiveRecord: 3.8ms | Allocations: 38266)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 10:48:07 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 51ms (ActiveRecord: 4.1ms | Allocations: 9112)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:48:07 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 673)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:48:07 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 413)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.6ms | Allocations: 13312)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 10:48:09 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.6ms | Allocations: 12431)
+
+
+Started POST "/users" for ::1 at 2021-04-26 10:48:33 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Usman Ghani", "email"=>"usman.ghani720+1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :full_name[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720+1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "usman.ghani720+1@gmail.com"], ["encrypted_password", "$2a$12$zkQjkGPMiFcSWMCqHaWO6ONzUXz16RnKCEI/3ANeD.IxRVThqyGVi"], ["created_at", "2021-04-26 05:48:33.329816"], ["updated_at", "2021-04-26 05:48:33.329816"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 316ms (ActiveRecord: 4.4ms | Allocations: 9631)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:48:33 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Id9bkQLYa7161Tz"], ["updated_at", "2021-04-26 05:48:35.574600"], ["id", 2]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2249ms (Views: 18.0ms | ActiveRecord: 4.6ms | Allocations: 31682)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 10:48:41 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2545)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:48:41 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 659)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:48:41 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 10926)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:49:47 +0500
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:50:17 +0500
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:51:54 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2055)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x00000000050faa28>):
+  
+app/controllers/application_controller.rb:5:in `configure_permitted_parameters'
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:52:47 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 2748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 219ms (Views: 186.2ms | ActiveRecord: 10.4ms | Allocations: 53157)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 10:52:50 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 113)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 70ms (Views: 66.7ms | ActiveRecord: 0.6ms | Allocations: 12578)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started POST "/users" for ::1 at 2021-04-26 10:53:08 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Usman Ghani", "email"=>"usman.ghani720+2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720+2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "full_name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "usman.ghani720+2@gmail.com"], ["encrypted_password", "$2a$12$xYvdVlSkNTuhSQwK6TCeTuo1FYBkPYOil0z8fojTeRxt29XqG2yPa"], ["created_at", "2021-04-26 05:53:08.710028"], ["updated_at", "2021-04-26 05:53:08.710028"], ["full_name", "Usman Ghani"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 318ms (ActiveRecord: 3.4ms | Allocations: 11033)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:53:08 +0500
+  [1m[36mCredential Load (0.9ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Icrzf4K5FcA6PMk"], ["updated_at", "2021-04-26 05:53:11.553765"], ["id", 3]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2846ms (Views: 17.2ms | ActiveRecord: 9.0ms | Allocations: 33848)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:55:28 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 1.0ms | Allocations: 11627)
+
+
+Started GET "/stripe/dashboard/3" for ::1 at 2021-04-26 10:55:30 +0500
+Processing by StripeController#dashboard as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 0.4ms | Allocations: 3523)
+
+
+  
+Stripe::AuthenticationError (Invalid API Key provided: test):
+  
+app/controllers/stripe_controller.rb:32:in `dashboard'
+Started GET "/stripe/dashboard/3" for ::1 at 2021-04-26 10:56:36 +0500
+Processing by StripeController#dashboard as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1286ms (ActiveRecord: 5.0ms | Allocations: 10145)
+
+
+  
+Stripe::AuthenticationError (Invalid API Key provided: test):
+  
+app/controllers/stripe_controller.rb:33:in `dashboard'
+  [1m[36mUser Update All (3.1ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1[0m  [["stripe_user_id", nil]]
+Started GET "/stripe/dashboard/3" for ::1 at 2021-04-26 10:57:41 +0500
+Processing by StripeController#dashboard as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1240ms (ActiveRecord: 5.2ms | Allocations: 10173)
+
+
+  
+Stripe::AuthenticationError (Invalid API Key provided: test):
+  
+app/controllers/stripe_controller.rb:31:in `dashboard'
+Started GET "/" for ::1 at 2021-04-26 10:57:55 +0500
+  [1m[36mCredential Load (2.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Icrzf4K5FcA6PMk"], ["updated_at", "2021-04-26 05:57:57.678768"], ["id", 3]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2019ms (Views: 18.8ms | ActiveRecord: 4.7ms | Allocations: 32287)
+
+
+Started GET "/stripe/dashboard/3" for ::1 at 2021-04-26 10:57:59 +0500
+Processing by StripeController#dashboard as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://connect.stripe.com/express/34F6v44nxDE5
+Completed 302 Found in 2191ms (ActiveRecord: 0.3ms | Allocations: 6032)
+
+
+Started GET "/stripe/dashboard/3" for ::1 at 2021-04-26 10:58:02 +0500
+Processing by StripeController#dashboard as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://connect.stripe.com/express/IBjYTedSIV4O
+Completed 302 Found in 1949ms (ActiveRecord: 0.6ms | Allocations: 6063)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:58:14 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.8ms | Allocations: 11457)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 10:58:22 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 3087)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:58:22 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 680)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:58:22 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (1.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 1.1ms | Allocations: 11274)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-26 10:58:27 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 294ms (ActiveRecord: 1.0ms | Allocations: 3878)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:58:27 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 2.2ms | Allocations: 11460)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Update All (3.1ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1[0m  [["stripe_user_id", nil]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-04-26 10:59:00 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Icrzf4K5FcA6PMk"], ["updated_at", "2021-04-26 05:59:02.618652"], ["id", 3]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (1.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2020ms (Views: 15.7ms | ActiveRecord: 4.6ms | Allocations: 31808)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 10:59:14 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 2570)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:59:14 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 678)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:59:14 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.4ms | Allocations: 10916)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-26 10:59:16 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 0.4ms | Allocations: 3109)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:59:16 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.6ms | Allocations: 11476)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", nil], ["updated_at", "2021-04-26 05:59:39.230976"], ["id", 3]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2021-04-26 10:59:41 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Icrzf4K5FcA6PMk"], ["updated_at", "2021-04-26 05:59:49.422149"], ["id", 3]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 7557ms (Views: 16.9ms | ActiveRecord: 5.0ms | Allocations: 31824)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 10:59:53 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2576)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:59:53 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 668)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 10:59:53 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.3ms | Allocations: 10917)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-26 10:59:54 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 301ms (ActiveRecord: 0.5ms | Allocations: 3104)
+
+
+Started GET "/" for ::1 at 2021-04-26 10:59:54 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 0.7ms | Allocations: 11609)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", nil], ["updated_at", "2021-04-26 06:00:08.395505"], ["id", 3]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-04-26 11:00:14 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1Icrzf4K5FcA6PMk"], ["updated_at", "2021-04-26 06:00:15.873254"], ["id", 3]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 1675ms (Views: 17.3ms | ActiveRecord: 6.6ms | Allocations: 31703)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 11:00:17 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 2568)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:00:17 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 678)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 11:00:17 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.5ms | Allocations: 11081)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 11:00:24 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.4ms | Allocations: 11230)
+
+
+Started POST "/users" for ::1 at 2021-04-26 11:00:41 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Usman Ghani", "email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "full_name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "usman.ghani720+s@gmail.com"], ["encrypted_password", "$2a$12$ZmXZX0kdVEPeysFy6TUZeum/t8yTXv3CawJQCil5JAMZQd0yIuON."], ["created_at", "2021-04-26 06:00:42.145502"], ["updated_at", "2021-04-26 06:00:42.145502"], ["full_name", "Usman Ghani"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 311ms (ActiveRecord: 4.0ms | Allocations: 7606)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:00:42 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2632ms (Views: 34.2ms | ActiveRecord: 1.4ms | Allocations: 29892)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:00:59 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2119ms (Views: 22.5ms | ActiveRecord: 0.7ms | Allocations: 30003)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:01:39 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2026ms (Views: 20.9ms | ActiveRecord: 1.2ms | Allocations: 29994)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:03:18 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  [1m[36mCredential Load (0.8ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:6:in `stripe_button_link'
+  Rendered payments/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2189ms (Views: 100.5ms | ActiveRecord: 1.3ms | Allocations: 30082)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/admin/credentials" for ::1 at 2021-04-26 11:13:52 +0500
+Processing by Admin::CredentialsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 2355)
+
+
+Started GET "/admin/login" for ::1 at 2021-04-26 11:13:52 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 1.0ms | Allocations: 561)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 11.5ms | Allocations: 8791)
+Completed 200 OK in 65ms (Views: 49.9ms | ActiveRecord: 3.8ms | Allocations: 29874)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:14:47 +0500
+  [1m[36mCredential Load (2.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "stripe_user_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["stripe_user_id", "acct_1IkNg1QSLvZjeEsH"], ["updated_at", "2021-04-26 06:14:49.773493"], ["id", 4]]
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/payments_controller.rb:14:in `new'
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.9ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2238ms (Views: 10.2ms | ActiveRecord: 5.0ms | Allocations: 40158)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 11:58:46 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 0.7ms | Allocations: 8583)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:58:46 +0500
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 760)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 11:58:46 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 413)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1510)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.3ms | Allocations: 13988)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 11:58:49 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (3.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 90ms (Views: 85.0ms | ActiveRecord: 3.1ms | Allocations: 12471)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-26 12:01:23 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 402)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms | Allocations: 14032)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 12:01:26 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.4ms | Allocations: 12156)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-26 12:01:28 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 1.0ms | Allocations: 5056)
+
+
+Started GET "/" for ::1 at 2021-04-26 12:01:29 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 293)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 1.0ms | Allocations: 12618)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 12:01:38 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 2567)
+
+
+Started GET "/" for ::1 at 2021-04-26 12:01:38 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 12:01:38 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms | Allocations: 11070)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/users/sign_in" for ::1 at 2021-04-26 12:18:43 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 455)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 197ms (Views: 159.5ms | ActiveRecord: 9.6ms | Allocations: 54492)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started POST "/create_charge" for ::1 at 2021-04-26 13:40:47 +0500
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/create_charge"):
+  
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2021-04-26 13:41:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 454)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 217ms (Views: 188.1ms | ActiveRecord: 9.9ms | Allocations: 53472)
+
+
+Started POST "/api/v1/create_charge" for ::1 at 2021-04-26 13:42:27 +0500
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/create_charge"):
+  
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/create_charge" for ::1 at 2021-04-26 13:42:44 +0500
+  
+ActionController::RoutingError (No route matches [POST] "/create_charge"):
+  
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started POST "/create_charge" for ::1 at 2021-04-26 13:44:58 +0500
+  
+ActionController::RoutingError (No route matches [POST] "/create_charge"):
+  
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started POST "/create-charge" for ::1 at 2021-04-26 13:46:25 +0500
+  [1m[36mCredential Load (3.9ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:3:in `<class:ChargesController>'
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/api/v1/charges_controller.rb:4:in `<class:ChargesController>'
+app/controllers/api/v1/charges_controller.rb:1:in `<top (required)>'
+Started POST "/create-charge" for ::1 at 2021-04-26 13:46:58 +0500
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:3:in `<class:ChargesController>'
+Processing by Api::V1::ChargesController#create as HTML
+  Parameters: {"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]", "charge"=>{"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1082)
+
+
+Started POST "/create-charge" for ::1 at 2021-04-26 13:47:10 +0500
+Processing by Api::V1::ChargesController#create as HTML
+  Parameters: {"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]", "charge"=>{"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Started POST "/create-charge" for ::1 at 2021-04-26 13:49:38 +0500
+  [1m[36mCredential Load (1.9ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:3:in `<class:ChargesController>'
+Processing by Api::V1::ChargesController#create as HTML
+  Parameters: {"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]", "charge"=>{"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:7:in `create'
+No template found for Api::V1::ChargesController#create, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 6.2ms | Allocations: 11083)
+
+
+Started POST "/create-charge" for ::1 at 2021-04-26 13:50:39 +0500
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:3:in `<class:ChargesController>'
+Processing by Api::V1::ChargesController#create as HTML
+  Parameters: {"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]", "charge"=>{"email"=>"usman.ghani720@gmail.com", "amount"=>100, "stripeToken"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "usman.ghani720@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/charges_controller.rb:7:in `create'
+Completed 200 OK in 188ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 7545)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 13:52:07 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 413)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 83ms (Views: 75.5ms | ActiveRecord: 0.5ms | Allocations: 14077)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-26 13:52:15 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 341ms (ActiveRecord: 0.6ms | Allocations: 5960)
+
+
+Started GET "/" for ::1 at 2021-04-26 13:52:16 +0500
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 0.3ms | Allocations: 5726)
+
+
+  
+ActionController::MissingExactTemplate (PaymentsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.6) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.6) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.6) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.6) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.6) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.6) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.6) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.6) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.6) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.6) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.6) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.6) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-26 13:53:21 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.3ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 0.8ms | Allocations: 13372)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-26 13:53:26 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 3071)
+
+
+Started GET "/" for ::1 at 2021-04-26 13:53:26 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 691)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 13:53:26 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 403)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.5ms | Allocations: 13317)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-26 13:53:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 50ms (Views: 27.5ms | ActiveRecord: 8.9ms | Allocations: 20351)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-04-28 22:31:33 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCredential Load (1.1ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:31:33 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 184ms (Views: 156.4ms | ActiveRecord: 4.2ms | Allocations: 50336)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:32:47 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 545)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.4ms | Allocations: 13631)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:32:49 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.1ms | Allocations: 197)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 168)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.4ms | Allocations: 12131)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:34:39 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 509)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1624)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.5ms | Allocations: 13502)
+
+
+Started POST "/users/password" for ::1 at 2021-04-28 22:34:51 +0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+sdfdsf@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+sdfdsf@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 218)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 69ms (Views: 31.4ms | ActiveRecord: 5.7ms | Allocations: 16124)
+
+
+Started POST "/users/password" for ::1 at 2021-04-28 22:35:02 +0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "aa134bd91a265dbcb2099cd8eee9c0f229000f6700719f7db5883977968c5eda"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "aa134bd91a265dbcb2099cd8eee9c0f229000f6700719f7db5883977968c5eda"], ["reset_password_sent_at", "2021-04-28 17:35:02.895425"], ["updated_at", "2021-04-28 17:35:02.896020"], ["id", 4]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 1.3ms | Allocations: 1203)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 6.5ms
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 9.8ms | Allocations: 25783)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  
+app/views/devise/mailer/reset_password_instructions.html.erb:5
+Started GET "/users/password" for ::1 at 2021-04-28 22:35:43 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/password"):
+  
+actionpack (6.0.3.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.6) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.6) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:35:47 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.6ms | Allocations: 10581)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:36:48 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (1.7ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 99ms (Views: 93.4ms | ActiveRecord: 1.7ms | Allocations: 10359)
+
+
+Started POST "/users/password" for ::1 at 2021-04-28 22:36:54 +0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "50245814f9bfd3d6010b69b865f6728c315720db70519acdd78e7001ca5a75fb"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "50245814f9bfd3d6010b69b865f6728c315720db70519acdd78e7001ca5a75fb"], ["reset_password_sent_at", "2021-04-28 17:36:54.644337"], ["updated_at", "2021-04-28 17:36:54.645686"], ["id", 4]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 0.8ms | Allocations: 1038)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 3.1ms
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 5.2ms | Allocations: 10101)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  
+app/views/devise/mailer/reset_password_instructions.html.erb:5
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started POST "/users/password" for ::1 at 2021-04-28 22:38:01 +0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "2264f214d25bc5dd7dfdd5ce679b63ef9583ac6a88631bec0343d501548e383c"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "2264f214d25bc5dd7dfdd5ce679b63ef9583ac6a88631bec0343d501548e383c"], ["reset_password_sent_at", "2021-04-28 17:38:02.206135"], ["updated_at", "2021-04-28 17:38:02.206566"], ["id", 4]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 3.6ms | Allocations: 639)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 17.4ms
+Delivered mail 60899d7a493e4_1e88117d831433@usman-HP-Pavilion-Notebook.mail (13.0ms)
+Date: Wed, 28 Apr 2021 22:38:02 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: usman.ghani720+s@gmail.com
+Message-ID: <60899d7a493e4_1e88117d831433@usman-HP-Pavilion-Notebook.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello usman.ghani720+s@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=2URxQDK4et6EZhfn1ZS5">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 398ms (ActiveRecord: 11.2ms | Allocations: 39105)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:38:02 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 596)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.7ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 148ms (Views: 141.2ms | ActiveRecord: 4.3ms | Allocations: 46172)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/restaurants-app/config/environment.rb:5)
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:39:43 +0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 198)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 599)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 148ms (Views: 101.3ms | ActiveRecord: 9.6ms | Allocations: 53491)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:39:46 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.6ms | Allocations: 10363)
+
+
+Started POST "/users/password" for ::1 at 2021-04-28 22:39:52 +0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "455771938e1cc4773740b0f338a79083446860b0422493eefa68c11b147c2b0c"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "455771938e1cc4773740b0f338a79083446860b0422493eefa68c11b147c2b0c"], ["reset_password_sent_at", "2021-04-28 17:39:52.653651"], ["updated_at", "2021-04-28 17:39:52.655910"], ["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 1.7ms | Allocations: 239)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 11.0ms
+Delivered mail 60899de8bacc5_1f9015194350ad@usman-HP-Pavilion-Notebook.mail (5161.6ms)
+Date: Wed, 28 Apr 2021 22:39:52 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: usman.ghani720+s@gmail.com
+Message-ID: <60899de8bacc5_1f9015194350ad@usman-HP-Pavilion-Notebook.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello usman.ghani720+s@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=UGavz6zcqk5wohMo86Ax">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 5509ms (ActiveRecord: 5.0ms | Allocations: 31786)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:39:57 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 170)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.9ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.9ms | Allocations: 12791)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2021-04-28 22:40:10 +0500
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.6ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.6ms | Allocations: 11222)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2021-04-28 22:43:20 +0500
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 189)
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 509)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.5ms | Allocations: 13915)
+
+
+Started PUT "/users/password" for ::1 at 2021-04-28 22:43:33 +0500
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "455771938e1cc4773740b0f338a79083446860b0422493eefa68c11b147c2b0c"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "reset_password_sent_at" = $1, "encrypted_password" = $2, "reset_password_token" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["reset_password_sent_at", nil], ["encrypted_password", "$2a$12$wz.mpdZjTf5HcQWm02S2aeIy3Qtl/FbcVdIw6L5gpc1YQITwzd2za"], ["reset_password_token", nil], ["updated_at", "2021-04-28 17:43:33.774480"], ["id", 4]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 361ms (ActiveRecord: 5.2ms | Allocations: 9784)
+
+
+Started GET "/" for ::1 at 2021-04-28 22:43:33 +0500
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:4:in `<class:PaymentsController>'
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE Credential Load (0.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 0.4ms | Allocations: 12329)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-28 22:43:40 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.6ms | Allocations: 2602)
+
+
+Started GET "/" for ::1 at 2021-04-28 22:43:40 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:43:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.4ms | Allocations: 11903)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-28 22:43:45 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 329ms (ActiveRecord: 1.1ms | Allocations: 1962)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 316ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 10513)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-28 22:43:51 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usman.ghani720+s@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "usman.ghani720+s@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 366ms (ActiveRecord: 0.6ms | Allocations: 4681)
+
+
+Started GET "/" for ::1 at 2021-04-28 22:43:51 +0500
+Processing by PaymentsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 1.0ms | Allocations: 11323)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-04-28 22:43:54 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 2236)
+
+
+Started GET "/" for ::1 at 2021-04-28 22:43:54 +0500
+Processing by PaymentsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:43:54 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 0.4ms | Allocations: 10810)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:43:56 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.5ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.5ms | Allocations: 10835)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-28 22:46:14 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (0.4ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.4ms | Allocations: 10645)
+
+
+Started GET "/users/password/new" for ::1 at 2021-04-28 22:46:37 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCredential Load (1.0ms)[0m  [1m[34mSELECT "credentials".* FROM "credentials" ORDER BY "credentials"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 1.0ms | Allocations: 10344)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/recurring-stripe/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/recurring-stripe/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/recurring-stripe/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1962212902996599120)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1962212902996599120)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/recurring-stripe/config/environment.rb:5)
+Started GET "/charges/new" for ::1 at 2021-06-11 18:25:05 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 521)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/recurring-stripe/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: ef270c56fa66020c9089
+Version: webpack 4.46.0
+Time: 2732ms
+Built at: 06/11/2021 6:25:16 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e88c6c3304a15e6886b6.js    124 KiB  application  [emitted] [immutable]  application
+js/application-e88c6c3304a15e6886b6.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e88c6c3304a15e6886b6.js js/application-e88c6c3304a15e6886b6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 10353ms (Views: 10344.7ms | ActiveRecord: 0.0ms | Allocations: 295611)
+
+
+Started GET "/charges/new" for ::1 at 2021-06-11 18:25:27 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms | Allocations: 8546)
+
+
