@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   require "stripe"
-  Stripe.api_key = 'sk_test_P9ZSzx6MHQxlxqRd1ZyMOKwZ'
+  Stripe.api_key = 'sk_test_51IhdOBJSUjZHBscM3zR09xqkA2UKr8qVwyecfYOZC4XraLAzjlqAVjpRhRWNMIYjJFa36AAD4JsK8lycYhDp1tnN00PO6BwIdY'
     def create
       stripe_params = {
         :name => params[:name],
