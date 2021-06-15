@@ -97,21 +97,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.sendgrid.net',
-    authentication: :plain,
-    domain: 'localhost',
-    enable_starttls_auto: true,
-    password: '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',
-    port: "587",
-    user_name: 'apikey',
-  }
-
   # ActionMailer Config
-  config.action_mailer.default_url_options = {
-    host: 'https://mighty-beyond-63109.herokuapp.com/'
-  }
-  config.action_mailer.delivery_method = :smtp
   # config.action_mailer.delivery_method = :letter_opener
 
   # Send email in development mode?

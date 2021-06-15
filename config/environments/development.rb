@@ -50,19 +50,6 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.sendgrid.net',
-    authentication: :plain,
-    domain: 'localhost',
-    enable_starttls_auto: true,
-    password: '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',
-    port: "587",
-    user_name: 'apikey',
-  }
-
-  # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
   # config.action_mailer.delivery_method = :letter_opener
 
   # Send email in development mode?
