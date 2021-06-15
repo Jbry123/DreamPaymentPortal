@@ -2683,3 +2683,10 @@ Processing by ChargesController#new as HTML
 Completed 200 OK in 1868ms (Views: 1867.2ms | ActiveRecord: 0.0ms | Allocations: 69919)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
