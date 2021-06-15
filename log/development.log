@@ -2690,3 +2690,75 @@ Change:
 To:
   >> Coffee::Rails::TemplateHandler.call(template, source)
  (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-15 13:34:04 +0500
+  
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-06-15 13:34:18 +0500
+  
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  
+config/routes.rb:6:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-06-15 13:34:57 +0500
+  
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-06-15 13:36:05 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 114.9ms | ActiveRecord: 0.0ms | Allocations: 47369)
+
+
+Started GET "/custom-donation" for ::1 at 2021-06-15 13:36:13 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 8547)
+
+
+Started GET "/" for ::1 at 2021-06-15 13:36:30 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.6ms | Allocations: 187)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 1536)
+
+
+Started GET "/custom-donation" for ::1 at 2021-06-15 13:36:34 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 10293)
+
+
+Started GET "/charges/new" for ::1 at 2021-06-15 13:36:42 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 8553)
+
+
