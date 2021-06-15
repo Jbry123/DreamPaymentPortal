@@ -2531,3 +2531,155 @@ Processing by ChargesController#new as HTML
 Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 8553)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-15 08:00:28 +0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 98.3ms | ActiveRecord: 0.0ms | Allocations: 40968)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-15 08:36:40 +0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 81.9ms | ActiveRecord: 0.0ms | Allocations: 36764)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-15 12:18:42 +0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 82.9ms | ActiveRecord: 0.0ms | Allocations: 36791)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:19:54 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 10143)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:24:00 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2852ms (Views: 2849.9ms | ActiveRecord: 0.0ms | Allocations: 75915)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:25:15 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2120ms (Views: 2119.1ms | ActiveRecord: 0.0ms | Allocations: 71515)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:25:37 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1856ms (Views: 1854.2ms | ActiveRecord: 0.0ms | Allocations: 71485)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:26:58 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 10169)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:27:32 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 10155)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:28:20 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 10146)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:29:13 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2037ms (Views: 2035.6ms | ActiveRecord: 0.0ms | Allocations: 70249)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:29:46 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1802ms (Views: 1800.5ms | ActiveRecord: 0.0ms | Allocations: 70335)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:30:36 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 10204)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:31:57 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1898ms (Views: 1896.0ms | ActiveRecord: 0.0ms | Allocations: 72340)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:32:38 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 301)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1740ms (Views: 1738.2ms | ActiveRecord: 0.0ms | Allocations: 72386)
+
+
+Started GET "/" for ::1 at 2021-06-15 12:33:27 +0500
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1868ms (Views: 1867.2ms | ActiveRecord: 0.0ms | Allocations: 69919)
+
+

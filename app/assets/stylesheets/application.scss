@@ -33,3 +33,33 @@
 .alert-info{
 	text-align: center;
 }
+.custom-logo {
+    width: 150px;
+	height: 100px;
+
+}
+.logo-div{
+	margin-top: 100px;
+}
+.site-footer>.site-info {
+    display: flex;
+    align-items: center;
+}
+.site-footer>.site-info .site-name {
+    text-transform: var(--branding--title--text-transform);
+    font-size: var(--branding--title--font-size);
+}
+.site-logo {
+    margin: calc(var(--global--spacing-vertical)/2)0;
+}
+.site-footer>.site-info .powered-by {
+    margin-top: initial;
+    margin-left: auto;
+}
+.footer-logo{
+	float: left;
+}
+.footer-power{
+	float: right;
+    margin-top: 50px;
+}
