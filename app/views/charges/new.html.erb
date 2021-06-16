@@ -18,11 +18,16 @@ input {
 .button-pay:hover {
   background: #8b0855 !important;
 }
+@media only screen and (max-width: 900px) {
+  .mobile {
+    transform: scale(2) !important;
+  }
+}
 
 
 </style>
   <div class="logo-div">
-    <div class="site-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div>
+    <div class="site-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link mobile" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo mobile" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div>
   </div>
     <div class="form-signin">
     <h2>Donate Monthly</h2>
@@ -31,7 +36,7 @@ input {
   <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 offset-md-4">
+        <div class="col-md-4 offset-md-4 mobile">
 
           <div class="field">
             <label>
@@ -78,7 +83,5 @@ input {
   </div>
   <% end %>
 </body>
-<div class="container">
-  <div class="site-info"><div class="site-name"><div class="site-logo footer-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div></div><!-- .site-name --><div class="powered-by footer-power"> Proudly powered by <a href="https://wordpress.org/">WordPress</a>.</div><!-- .powered-by --></div>
-</div>
+
 
