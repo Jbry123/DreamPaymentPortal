@@ -66,3 +66,19 @@
     margin-top: 50px;
 }
 
+input {
+    border: 2px solid #e40a89 !important;
+ }
+
+.button-pay {
+    margin: 0 !important;
+    border: none;
+    background: #e40a89 !important;
+    border-radius: 5px;
+    transition: all 1.2s;
+}
+
+.button-pay:hover {
+    background: #8b0855 !important;
+}
+
