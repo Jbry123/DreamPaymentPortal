@@ -10,11 +10,13 @@ input {
   border: none;
   background: #e40a89 !important;
   border-radius: 5px;
-  transition: all 1.2s;
+  transition: all 1s;
+  height: 40px;
 }
 
 .button-pay:hover {
   background: #8b0855 !important;
+  box-shadow: 2px 0px 10px #00000060;
 }
 
 
@@ -58,9 +60,9 @@ input {
 
           <div class="field">
             <label>
-              <input type="text" size="2" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+              <input type="text" size="4" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
             </label>
-              <input type="text" size="4" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+              <input type="text" size="8" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
           </div>
 
           <div class="field">
