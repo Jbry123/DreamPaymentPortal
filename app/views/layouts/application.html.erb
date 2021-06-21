@@ -42,7 +42,7 @@
 
           function cvalue1() { 
             if(document.getElementById('Cvalue1').checked) {
-              document.querySelector('#amount').value = document.querySelector('#Cvalue1').value;
+              $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#Cvalue1').value));
             }
         }
           function cvalue2() { 
