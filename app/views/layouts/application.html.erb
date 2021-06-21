@@ -24,43 +24,7 @@
           Stripe.card.createToken($form, stripeResponseHandler);
           return false;
         });
-        setInterval(myTimer, 500);
-
-        function myTimer() {
-        
-        
-                  function cvalue1() { 
-                    if(document.getElementById('Cvalue1').checked) {
-                      document.querySelector('#amount').value = document.querySelector('#Cvalue1').value;
-                    }
-                }
-                  function cvalue2() { 
-                    if(document.getElementById('Cvalue2').checked) {
-                      document.querySelector('#amount').value = document.querySelector('#Cvalue2').value;
-                    }
-                }
-                  function cvalue3() { 
-                    if(document.getElementById('Cvalue3').checked) {
-                      document.querySelector('#amount').value = document.querySelector('#Cvalue3').value;
-                    }
-                }
-                function cvalue4() { 
-                  if(document.getElementById('Cvalue4').checked) {
-                    document.querySelector('#amount').value = document.querySelector('#Cvalue4').value;
-                  }
-              }
-                function cvalue5() { 
-                  if(document.getElementById('Cvalue5').checked) {
-                    document.querySelector('#amount').value = document.querySelector('#Cvalue5').value;
-                  }
-              }
-                function cvalue6() { 
-                  if(document.getElementById('Cvalue6').checked) {
-                    document.querySelector('#amount').value = document.querySelector('#Cvalue6').value;
-                  }
-              }
-            }
-
+      
       stripeResponseHandler = function(status, response) {
         var $form, token;
         $form = $('#payment-form');
@@ -74,8 +38,6 @@
           $form.append($('<input type="hidden" name="email" />').val(document.querySelector('#email').value));
           $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
           $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
-                    document.querySelector('#amount').value = document.querySelector('#Cvalue6').value;
-
 
           $form.get(0).submit();
         }
