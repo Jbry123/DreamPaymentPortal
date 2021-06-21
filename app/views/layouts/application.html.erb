@@ -39,6 +39,8 @@
           $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
           $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
 
+          document.querySelector('#Cvalue1').onclick = function(){ document.querySelector('#amount').value = document.querySelector('#Cvalue1').value};
+
           $form.get(0).submit();
         }
       };
