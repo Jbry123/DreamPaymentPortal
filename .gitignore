@@ -47,4 +47,5 @@ desktop.ini
 *.rdb
 /vendor/bundle
 /config/secrets.yml
+tmp/cache/
 

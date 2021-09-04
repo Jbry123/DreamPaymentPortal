@@ -1,5 +1,3 @@
-require "active_support/core_ext/integer/time"
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -22,16 +20,16 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = true
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.asset_host = 'http://assets.example.com'
+  # config.action_controller.asset_host = 'http://assets.example.com'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -48,9 +46,9 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
-  # Include generic and useful information about system operation, but avoid logging too much
-  # information to avoid inadvertent exposure of personally identifiable information (PII).
-  config.log_level = :info
+  # Use the lowest log level to ensure availability of diagnostic information
+  # when problems arise.
+  config.log_level = :debug
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -60,7 +58,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "restaurants_app_production"
+  # config.active_job.queue_name_prefix = "standard_production"
 
   config.action_mailer.perform_caching = false
 
@@ -75,17 +73,11 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  # Log disallowed deprecations.
-  config.active_support.disallowed_deprecation = :log
-
-  # Tell Active Support which deprecation messages to disallow.
-  config.active_support.disallowed_deprecation_warnings = []
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Use a different logger for distributed setups.
-  # require "syslog/logger"
+  # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
@@ -97,17 +89,23 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # ActionMailer Config
-  # config.action_mailer.delivery_method = :letter_opener
-
-  # Send email in development mode?
-  config.action_mailer.perform_deliveries = true
-
   config.action_mailer.raise_delivery_errors = true
+  
+  config.action_mailer.perform_deliveries = true
+  
+  config.action_mailer.default_url_options = { host: 'https://young-mountain-95854.herokuapp.com' }
 
-  # Highlight code that triggered database queries in logs.
-  config.active_record.verbose_query_logs = true
+  config.action_mailer.delivery_method = :smtp
 
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 '587',
+    domain:               'young-mountain-95854.herokuapp.com',
+    user_name:            'apikey',
+    password:             ENV["PASSWORD"],
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write

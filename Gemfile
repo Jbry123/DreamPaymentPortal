@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.0"
+ruby '2.7.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'rails', '~> 6.0.4'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -17,27 +17,16 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-
 gem 'devise'
+gem 'activeadmin'
+gem 'bootstrap', '~> 5.0.1'
 gem 'stripe'
-gem "httparty"
 gem 'stripe-rails'
 gem 'jquery-turbolinks'
-
-gem 'dotenv-rails'
-gem 'faraday'
-
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem "httparty"
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '5.0.5'
-
-gem 'activeadmin'
-gem 'bootstrap', '~> 4.0.0'
-
-gem 'rack-cors'
 gem 'wicked'
-
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

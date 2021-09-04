@@ -9,13 +9,12 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.secret_key = 'bb35c37df196db0006facf3854a940be817bfe76fd9628b357cd9e63d0013e4359b325550c78b94c501dd674cd5874ed79cc39b0cf581a00ab49e402ef91e00d'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'c40cf617ba0d688e3699e0ddbd23c566aa22ffe661b3c5a0e5c8f6431f69eba6a1fed834f308a26c7b0823d9c422f665de1579312a1356cd3c97a5fc925167e5'
+  # config.secret_key = '203670ef5754576ea263909eb82537b761efcf6211dac27d9210bed9b271be7464ac2ad8961aa99e2c7d99c81e59b978942ad5a614ad91b9b6f33460dcc1ab19'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -38,7 +37,7 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-
+  config.sign_out_via = :get
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -127,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '3d6a550e4736d4feaf3edfa56709274cce2b611b7154bcaa714ba7ba95533eba4b615bc18a68496aa05f1c9a2b6b90381d032045211df267cadf38b49dba1cfc'
+  # config.pepper = 'a0d9177837c4dced295b6cbe3ed054ea9ce643bff1e03f970de3196251ea647a00883ac353ab1e9495191ef13a6e617466187a43e7af4db7084adf24eeccad32'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
