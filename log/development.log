@@ -6271,3 +6271,128 @@ Entrypoint application = js/application-63c1a36005680d06496b.js js/application-6
 Completed 200 OK in 4381ms (Views: 4367.6ms | ActiveRecord: 0.0ms | Allocations: 38686)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/gentle-savannah-69533/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-04 23:30:33 +0500
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 411)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+
+Error: Cannot find module './plugins/jquery'
+Require stack:
+- /home/usman/projects/gentle-savannah-69533/config/webpack/environment.js
+- /home/usman/projects/gentle-savannah-69533/config/webpack/development.js
+- /home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js
+- /home/usman/projects/gentle-savannah-69533/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (/home/usman/projects/gentle-savannah-69533/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/usman/projects/gentle-savannah-69533/config/webpack/environment.js:2:16)
+    at Module._compile (/home/usman/projects/gentle-savannah-69533/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (/home/usman/projects/gentle-savannah-69533/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/usman/projects/gentle-savannah-69533/config/webpack/development.js:3:21)
+    at Module._compile (/home/usman/projects/gentle-savannah-69533/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (/home/usman/projects/gentle-savannah-69533/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at WEBPACK_OPTIONS (/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js:114:13)
+    at requireConfig (/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js:116:6)
+    at /home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js:123:17
+    at Array.forEach (<anonymous>)
+    at module.exports (/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js:121:15)
+    at /home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js:71:45
+    at Object.parse (/home/usman/projects/gentle-savannah-69533/node_modules/yargs/yargs.js:576:18)
+    at /home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js:49:8
+    at Object.<anonymous> (/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js:366:3)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/usman/projects/gentle-savannah-69533/config/webpack/environment.js',
+    '/home/usman/projects/gentle-savannah-69533/config/webpack/development.js',
+    '/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/utils/convert-argv.js',
+    '/home/usman/projects/gentle-savannah-69533/node_modules/webpack-cli/bin/cli.js',
+    '/home/usman/projects/gentle-savannah-69533/node_modules/webpack/bin/webpack.js'
+  ]
+}
+
+Completed 200 OK in 8504ms (Views: 8495.8ms | ActiveRecord: 0.0ms | Allocations: 351462)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/gentle-savannah-69533/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-04 23:34:35 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 114.0ms | ActiveRecord: 0.0ms | Allocations: 38158)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-04 23:34:44 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 0.9ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 10750)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-04 23:34:47 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "amount"=>"100"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1379)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-04 23:34:47 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9889)
+
+
+Started POST "/charges" for ::1 at 2021-09-04 23:35:02 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "billing_method"=>"Credit or Debit", "email"=>"usman.ghani720@gmail.com", "first_name"=>"Usman", "last_name"=>"Ghani", "name"=>"Usman Ghani", "country"=>"Pakistan", "postal_code"=>"5400", "description"=>"Shelby Compaign", "stripeToken"=>"[FILTERED]"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 3860ms (ActiveRecord: 0.0ms | Allocations: 5222)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-04 23:35:06 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 9710)
+
+
