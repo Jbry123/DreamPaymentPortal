@@ -16,7 +16,7 @@ require('jquery')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-$(document).on("turbolinks:load", function() {
+$( document ).ready(function() {
   var stripeResponseHandler;
 
   $('#payment-form').submit(function(event) {
