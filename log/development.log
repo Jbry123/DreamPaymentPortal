@@ -6239,3 +6239,35 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 121ms (Views: 111.7ms | ActiveRecord: 0.0ms | Allocations: 37433)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/gentle-savannah-69533/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-09-04 23:17:02 +0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 413)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Hash: 0bcaf97530e4a15eb350
+Version: webpack 4.46.0
+Time: 2005ms
+Built at: 09/04/2021 11:17:06 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-63c1a36005680d06496b.js    842 KiB  application  [emitted] [immutable]  application
+js/application-63c1a36005680d06496b.js.map    898 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-63c1a36005680d06496b.js js/application-63c1a36005680d06496b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 769 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+Completed 200 OK in 4381ms (Views: 4367.6ms | ActiveRecord: 0.0ms | Allocations: 38686)
+
+
