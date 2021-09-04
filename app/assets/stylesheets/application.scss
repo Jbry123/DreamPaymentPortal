@@ -24,7 +24,10 @@
 }
 
 .card-fields {
-	width: 100% !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+    border: none;
+    padding: 10px;
 }
 
 .card-fields-date {
@@ -62,4 +65,37 @@
 .footer-power{
 	float: right;
     margin-top: 50px;
+}
+.info-section{
+    background-color: #F7F7F7;
+    padding: 50px;
+}
+.heading{
+    color: #E670B5;
+    font-weight: 600;
+    text-align: left !important;
+}
+.hr{
+    border: 2px solid #E670B5;
+}
+.sub_text p{
+    float: left;
+    padding-top: 20px;
+}
+.donate_button{
+    width: 100%;
+    border-radius: 10px !important;
+    background: #E670B5 !important;
+    color: #FFFFFF;
+    padding: 20px !important;
+}
+.share_button{
+    width: 100%;
+    border-radius: 10px;
+    background: #FFFFFF !important;
+    color: #000000;
+    padding: 15px;
+}
+.left_align{
+    text-align: left !important;
 }

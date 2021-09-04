@@ -12,8 +12,8 @@
     <script src="/assets/jquery_ujs.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
-      Stripe.setPublishableKey("pk_test_51IhdOBJSUjZHBscMMociumWH4ZBUnPl0PXkQpDeoy6O4pVUx65pFZ3uBO9yg6APfVfMDAemvCFMGEyGE91zeRUlG00O5IBcs40");
-      $(document).ready(function() {
+      Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>");
+      $(document).on("turbolinks:load", function() {
         var stripeResponseHandler;
     
         $('#payment-form').submit(function(event) {
@@ -34,9 +34,6 @@
           token = response.id;
           
           $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-          $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
-          $form.append($('<input type="hidden" name="email" />').val(document.querySelector('#email').value));
-          $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
           $form.get(0).submit();
         }
       };

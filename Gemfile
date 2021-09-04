@@ -36,6 +36,7 @@ gem 'activeadmin'
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'rack-cors'
+gem 'wicked'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
