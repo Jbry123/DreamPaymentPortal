@@ -9176,3 +9176,184 @@ Processing by ChargesController#show as HTML
 Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 8769)
 
 
+Started GET "/" for ::1 at 2021-09-05 00:03:23 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 355)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 087b104a2a4d75648013
+Version: webpack 4.46.0
+Time: 1758ms
+Built at: 09/05/2021 12:03:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-83cf99beffc0d80ac3e0.js    843 KiB  application  [emitted] [immutable]  application
+js/application-83cf99beffc0d80ac3e0.js.map    899 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-83cf99beffc0d80ac3e0.js js/application-83cf99beffc0d80ac3e0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.54 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+Completed 200 OK in 3138ms (Views: 3131.9ms | ActiveRecord: 0.0ms | Allocations: 41478)
+
+
+Started GET "/" for ::1 at 2021-09-05 00:03:46 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 219)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 06a28d7897d66384ab92
+Version: webpack 4.46.0
+Time: 1745ms
+Built at: 09/05/2021 12:03:50 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-470d768b37b58390427a.js    843 KiB  application  [emitted] [immutable]  application
+js/application-470d768b37b58390427a.js.map    899 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-470d768b37b58390427a.js js/application-470d768b37b58390427a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.48 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+Completed 200 OK in 3375ms (Views: 3372.8ms | ActiveRecord: 0.0ms | Allocations: 11432)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-05 00:03:56 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 0.6ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 9856)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-05 00:04:00 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"P8S5Qf1aL/5MMkA7JIB6kRpHNqRKbHCmnWjVj5VaMNzhTnhRYaV01fBkhY2fbr6FPYBX/a1AzWmyLloBqjJmMg==", "amount"=>"100"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 607)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:04:00 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 9068)
+
+
+Started POST "/charges" for ::1 at 2021-09-05 00:04:22 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"n4Y9V9RMw6zRGXE/tyVxMbQzZj3z2ZYo4sqVoPxk8XxBDPxHSLOYh21PtIkMy7Ulk/QHZBT1K+fNjBouwwynkg==", "billing_method"=>"Credit or Debit", "email"=>"", "first_name"=>"", "last_name"=>"", "name"=>"", "country"=>"", "postal_code"=>"", "description"=>"Shelby Compaign"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 951)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:04:22 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 8759)
+
+
+Started GET "/" for ::1 at 2021-09-05 00:10:29 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 358)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 79b44090b379e758dc12
+Version: webpack 4.46.0
+Time: 2057ms
+Built at: 09/05/2021 12:10:33 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7f68b03ca5d70e07a04f.js    843 KiB  application  [emitted] [immutable]  application
+js/application-7f68b03ca5d70e07a04f.js.map    899 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-7f68b03ca5d70e07a04f.js js/application-7f68b03ca5d70e07a04f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.47 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+Completed 200 OK in 3845ms (Views: 3836.2ms | ActiveRecord: 0.0ms | Allocations: 41448)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-05 00:10:37 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 1.2ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 9915)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-05 00:10:39 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"3PjXI3GypypLFU/AVvAka+dSmLbrCsN+EmLZ2b2gQocCchYz7U38AfdDinbtHuB/wJX57wwmfrE9JFZXgsgUaQ==", "amount"=>"100"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:10:39 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 0.8ms | Allocations: 327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 9080)
+
+
+Started POST "/charges" for ::1 at 2021-09-05 00:11:00 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"J6gOsXRpeRbX305n0ZDqYsfcWdd8/CrXB+5jqJRP8r75Is+h6JYiPWuJi9Fqfi524Bs4jpvQlxgoqOwmqyekUA==", "billing_method"=>"Credit or Debit", "email"=>"", "first_name"=>"", "last_name"=>"", "name"=>"", "country"=>"", "postal_code"=>"", "description"=>"Shelby Compaign", "stripeToken"=>"tok_1JW4GWD0Bbu6JmPgGcY6HB0s"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 2782ms (ActiveRecord: 0.0ms | Allocations: 4429)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-05 00:11:03 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.1ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 8895)
+
+

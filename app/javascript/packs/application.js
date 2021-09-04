@@ -16,5 +16,31 @@ require('jquery')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+$(document).on("turbolinks:load", function() {
+  var stripeResponseHandler;
+
+  $('#payment-form').submit(function(event) {
+    var $form;
+    $form = $(this);
+    $form.find('button').prop('disabled', true);
+    Stripe.card.createToken($form, stripeResponseHandler);
+    return false;
+  });
+
+stripeResponseHandler = function(status, response) {
+  var $form, token;
+  $form = $('#payment-form');
+  if (response.error) {
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('button').prop('disabled', false);
+  } else {
+    token = response.id;
+    
+    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+    $form.get(0).submit();
+  }
+};
+});
+
 
 
