@@ -7,7 +7,6 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
     <script src="/assets/jquery.js" type="text/javascript"></script>
     <script src="/assets/jquery_ujs.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -17,7 +16,6 @@
         var stripeResponseHandler;
     
         $('#payment-form').submit(function(event) {
-          debugger
           var $form;
           $form = $(this);
           $form.find('button').prop('disabled', true);
