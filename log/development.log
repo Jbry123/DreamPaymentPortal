@@ -9656,3 +9656,60 @@ Processing by ChargesController#show as HTML
 Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 10371)
 
 
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:53:20 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.9ms | Allocations: 482)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Hash: 0bcaf97530e4a15eb350
+Version: webpack 4.46.0
+Time: 2712ms
+Built at: 09/05/2021 12:53:25 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-63c1a36005680d06496b.js    842 KiB  application  [emitted] [immutable]  application
+js/application-63c1a36005680d06496b.js.map    898 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-63c1a36005680d06496b.js js/application-63c1a36005680d06496b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 769 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+Completed 200 OK in 5085ms (Views: 5078.9ms | ActiveRecord: 0.0ms | Allocations: 41563)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:53:37 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 0.9ms | Allocations: 326)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8777)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:54:14 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.4ms | Allocations: 482)
+Completed 200 OK in 126ms (Views: 118.6ms | ActiveRecord: 0.0ms | Allocations: 38658)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:56:40 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.0ms | Allocations: 322)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.0ms | Allocations: 8756)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-05 00:57:12 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 0.9ms | Allocations: 325)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 8760)
+
+
