@@ -17,6 +17,7 @@
         var stripeResponseHandler;
     
         $('#payment-form').submit(function(event) {
+          debugger
           var $form;
           $form = $(this);
           $form.find('button').prop('disabled', true);

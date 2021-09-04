@@ -4925,3 +4925,12 @@ Change:
 To:
   >> Coffee::Rails::TemplateHandler.call(template, source)
  (called from <top (required)> at /home/usman/projects/gentle-savannah-69533/config/environment.rb:5)
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-04 22:25:02 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 10345)
+
+
