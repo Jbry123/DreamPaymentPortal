@@ -24,19 +24,19 @@ class ChargesController < ApplicationController
       redirect_to charge_path(:show_confirmation), notice: "Charge was successfully created"
   
       rescue Stripe::CardError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue Stripe::InvalidRequestError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue Stripe::RateLimitError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue Stripe::AuthenticationError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue Stripe::APIConnectionError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue Stripe::StripeError => e
-        redirect_to charge_path(:take_card_info), notice: e.message
+        redirect_to request.referer, notice: e.message
       rescue => e
-        redirect_to charge_path(:take_card_info), notice: "Charge Failed"
+        redirect_to request.referer, notice: "Charge Failed"
     end
   end
 end

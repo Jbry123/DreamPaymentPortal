@@ -1,41 +1,13 @@
-
-  <body class="text-center">
-  <div class="logo-div">
-    <div class="site-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div>
-  </div>
-    <div class="form-signin">
-  </div>
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-        <div class="row">
-        <div class="col-md-6">
-                <div>
-                    <img src="https://images.gofundme.com/NLlPGIuCOn3HN4P7WaZFx3ZjUs8=/1200x900/https://d2g8igdw686xgo.cloudfront.net/58631955_1626910134193243_r.jpeg" height="550"/>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="info-section">
-                    <h2 class="heading"> Help Shelby (Homeless Poet) stay off the streets</h2>
-                    <p class="left_align">Shelby was a homeless Poet from Washington D.C. Her son recently passed recently passed away a month ago and 
-                    is now getting evicted from her current home, which may result to her becoming homeless again. Shelby's rent is 
-                    currently 375.00 per month, our goal is to raise 4700 to cover her rent expense for the whole year</p> 
-                    <p class="left_align">Please donate and help SHelby stay off the streets. We need your help</p>
-                    <div class="hr"></div>
-                    <div class="sub_text">
-                        <p>54080 raised of 35000 Goal</p> 
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                        <%= button_to "Donate", charge_path(:take_amount), :class => "donate_button", :method => :get %>
-                        <br />
-                        <button class="share_button">Share</button>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-</body>
-
+<% if params[:compaign].present? %>
+  <% if params[:compaign] == "Shelbys-fund" %>
+    <% cookies[:compaign] = "Shelbys-fund" %>
+    <%= render partial: "welcome/Shelbys-fund" %>
+  <% elsif params[:compaign] == "Saras-fund" %>
+    <% cookies[:compaign] = "Saras-fund" %>
+    <%= render partial: "welcome/Saras-fund" %>
+  <% end %>
+<% else %>
+  <%= render partial: "welcome/default" %>
+<% end %>
 
 

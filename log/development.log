@@ -9713,3 +9713,568 @@ Processing by ChargesController#show as HTML
 Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 8760)
 
 
+Started GET "/" for ::1 at 2021-09-07 19:50:45 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 358)
+Completed 200 OK in 217ms (Views: 207.0ms | ActiveRecord: 0.0ms | Allocations: 38663)
+
+
+Started GET "/" for ::1 at 2021-09-07 19:50:50 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7099)
+
+
+Started GET "/?compaign=Sarahs-fund" for ::1 at 2021-09-07 19:57:59 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Sarahs-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+Completed 200 OK in 23404ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 52729)
+
+
+Started GET "/" for ::1 at 2021-09-07 20:01:55 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 2.3ms | Allocations: 1566)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2468)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2021-09-07 20:02:18 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 1.0ms | Allocations: 319)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started GET "/" for ::1 at 2021-09-07 20:02:50 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 0.6ms | Allocations: 575)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1322)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2021-09-07 20:03:39 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 0.5ms | Allocations: 576)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1321)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2021-09-07 20:04:11 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 81)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 8675)
+
+
+Started GET "/" for ::1 at 2021-09-07 20:04:23 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 4.5ms | Allocations: 1380)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1986)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3804)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+    1: 
+    2: <%= render :partial => "default", layout: 'layouts/application' %>
+  
+app/views/welcome/index.html.erb:2
+Started GET "/" for ::1 at 2021-09-07 20:04:46 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 2.3ms | Allocations: 1380)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1991)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3818)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+    1: 
+    2: <%= render :partial => "welcome/default", layout: 'layouts/application' %>
+  
+app/views/welcome/index.html.erb:2
+Started GET "/" for ::1 at 2021-09-07 20:05:13 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 2.2ms | Allocations: 1269)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2162)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:6:in `index'
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:06:49 +0500
+  
+SyntaxError (/home/usman/projects/gentle-savannah-69533/app/controllers/welcome_controller.rb:8: syntax error, unexpected `end'
+      end
+      ^~~
+/home/usman/projects/gentle-savannah-69533/app/controllers/welcome_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/welcome_controller.rb:8: syntax error, unexpected `end'
+app/controllers/welcome_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/welcome_controller.rb:8: syntax error, unexpected `end'
+app/controllers/welcome_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/welcome_controller.rb:8: syntax error, unexpected `end'
+app/controllers/welcome_controller.rb:13: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:07:04 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.3ms | Allocations: 69)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 969)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:08:22 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.5ms | Allocations: 217)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1131)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:24:31 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.4ms | Allocations: 81)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1388)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:24:58 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.2ms | Allocations: 77)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 672)
+
+
+Started GET "/" for ::1 at 2021-09-07 20:25:03 +0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/_default.html.erb (Duration: 2.0ms | Allocations: 1300)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2002)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:8:in `index'
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 20:27:30 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.2ms | Allocations: 77)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 664)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:02:57 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.4ms | Allocations: 81)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1390)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:07:37 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.9ms | Allocations: 219)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1839)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:10:53 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.7ms | Allocations: 219)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1848)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:11:24 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.3ms | Allocations: 81)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1409)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:11:53 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.2ms | Allocations: 81)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1379)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:12:07 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 5.1ms | Allocations: 1528)
+Completed 500 Internal Server Error in 3147ms (ActiveRecord: 0.0ms | Allocations: 48346)
+
+
+  
+ActionView::MissingTemplate (Missing partial layouts/_application with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+  
+app/controllers/welcome_controller.rb:7:in `index'
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:12:34 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 1.3ms | Allocations: 359)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1847)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-07 21:13:14 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2056)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4119)
+
+
+  
+ActionView::Template::Error (Missing partial Shelbys-fund/_take_amount with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :jbuilder]}. Searched in:
+  * "/home/usman/projects/gentle-savannah-69533/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/stripe-rails-2.3.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.1/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.8.0/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actiontext-6.0.4/app/views"
+  * "/home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.4/app/views"
+):
+    1: <% if cookies[:compaign] == "Shelbys-fund" %>
+    2:   <%= render partial: "Shelbys-fund/take_amount" %>
+    3: <% end %>
+  
+app/views/charges/take_amount.html.erb:2
+app/controllers/charges_controller.rb:8:in `show'
+Started GET "/charges/take_amount" for ::1 at 2021-09-07 21:13:48 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_amount.html.erb (Duration: 0.9ms | Allocations: 293)
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 1.9ms | Allocations: 612)
+Completed 200 OK in 126ms (Views: 125.1ms | ActiveRecord: 0.0ms | Allocations: 38038)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-07 21:14:08 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_amount.html.erb (Duration: 0.7ms | Allocations: 266)
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 1.6ms | Allocations: 580)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 9026)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-07 21:14:11 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"hKfJsyAtxoIrdvTemo4kuKmgISvJno/FQXGILtAOjW5LOOMaGE8r7Aoed5vwnkGgUgxtkzWgJFVN9j9YacuDJA==", "amount"=>"100"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 638)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-07 21:14:11 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_card_info.html.erb (Duration: 1.1ms | Allocations: 328)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 5.4ms | Allocations: 642)
+Completed 200 OK in 30ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 7794)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-07 21:14:36 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_card_info.html.erb (Duration: 1.0ms | Allocations: 324)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 2.5ms | Allocations: 636)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 9075)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 21:14:43 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_show_confirmation.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.4ms | Allocations: 424)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 7673)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:18:25 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.6ms | Allocations: 221)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1119)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:22:15 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 616)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 9182)
+
+
+Started GET "/" for ::1 at 2021-09-07 21:22:21 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.9ms | Allocations: 303)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 522)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 21:22:27 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 166)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 7170)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-07 21:22:31 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_amount.html.erb (Duration: 0.8ms | Allocations: 267)
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 1.7ms | Allocations: 586)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8752)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-07 21:22:35 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"I3TZsBTUm+M+72Fs2H37RrRa2VViPCAGgv5+UO1pomrs6/MZLLZ2jR+H4imybZ5eT/aV7Z4Ci5aOeckmVKysIA==", "amount"=>"150"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 617)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-07 21:22:35 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_card_info.html.erb (Duration: 1.0ms | Allocations: 324)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 3.2ms | Allocations: 636)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 7782)
+
+
+Started POST "/charges" for ::1 at 2021-09-07 21:23:10 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"NV9Qw/99WmX2blJpPT/DCtRdkwEp2gHgp91DDf6ItrGXtYDkQ3MfYOq9wCA0HmB7T1riHZrocAZqfF6jSJ10Xw==", "billing_method"=>"Credit or Debit", "email"=>"", "first_name"=>"", "last_name"=>"", "name"=>"", "country"=>"", "postal_code"=>"", "description"=>"Shelby Compaign", "stripeToken"=>"tok_1JX74kD0Bbu6JmPgOnW9QHWX"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 3395ms (ActiveRecord: 0.0ms | Allocations: 4502)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 21:23:13 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_show_confirmation.html.erb (Duration: 0.6ms | Allocations: 106)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 3.8ms | Allocations: 420)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 7608)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 22:10:41 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/_default_confirmation.html.erb (Duration: 0.6ms | Allocations: 105)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.9ms | Allocations: 475)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 8934)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 22:11:08 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/_default_confirmation.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 0.3ms | Allocations: 77)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 7083)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 22:11:33 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/_default_confirmation.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.6ms | Allocations: 466)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 8888)
+
+
+Started GET "/" for ::1 at 2021-09-07 22:12:12 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.6ms | Allocations: 299)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 686)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 8650)
+
+
+Started GET "/" for ::1 at 2021-09-07 22:14:39 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 201)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 7186)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 22:14:49 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.7ms | Allocations: 217)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 445)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 7443)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 22:14:56 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.3ms | Allocations: 77)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 165)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7164)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-07 22:18:19 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.6ms | Allocations: 214)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 609)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 9097)
+
+
+Started GET "/?compaign=Saras-fund" for ::1 at 2021-09-07 22:19:56 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Saras-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 192)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 8712)
+
+
+Started GET "/?compaign=Saras-fund" for ::1 at 2021-09-07 22:20:56 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Saras-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Saras-fund.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 518)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 8931)
+
+
+Started GET "/?compaign=Saras-fund" for ::1 at 2021-09-07 22:21:15 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Saras-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Saras-fund.html.erb (Duration: 1.0ms | Allocations: 214)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 654)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 9078)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-09-07 22:21:18 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/Saras-fund/_take_amount.html.erb (Duration: 0.5ms | Allocations: 267)
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 1.2ms | Allocations: 619)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 8577)
+
+
+Started POST "/save_amount" for ::1 at 2021-09-07 22:21:22 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"oWfo4W6KSstiw5C7kn9rpLtZQDssuihmJqUqkN/W/YBu+MJIVuinpUOrE/74bw68QPUMg9CEg/YqIp3mZhPzyg==", "amount"=>"100"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-09-07 22:21:22 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Saras-fund/_take_card_info.html.erb (Duration: 0.8ms | Allocations: 325)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.7ms | Allocations: 677)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 7947)
+
+
+Started POST "/charges" for ::1 at 2021-09-07 22:21:47 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"+L3I2yQcm/yxVbwQKLqBUyVe3X8bajU645R9YDWesaFaVxj8mBLe+a2GLlkhmyIivlmsY6hYRNwuNWDOg4tzTw==", "billing_method"=>"Credit or Debit", "email"=>"usman.ghani720@gmail.com", "first_name"=>"Usman", "last_name"=>"Ghani", "name"=>"Usman Ghani", "country"=>"Pakistan", "postal_code"=>"5400", "description"=>"Shelby Compaign", "stripeToken"=>"tok_1JX7zTD0Bbu6JmPglSpNK3qL"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 1854ms (ActiveRecord: 0.0ms | Allocations: 3982)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-09-07 22:21:49 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/Saras-fund/_show_confirmation.html.erb (Duration: 0.4ms | Allocations: 107)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.2ms | Allocations: 511)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 7751)
+
+
