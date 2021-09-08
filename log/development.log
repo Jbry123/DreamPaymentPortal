@@ -10336,3 +10336,20 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 7440)
 
 
+Started GET "/" for ::1 at 2021-09-08 18:55:43 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.9ms | Allocations: 344)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 906)
+Completed 200 OK in 3935ms (Views: 3929.5ms | ActiveRecord: 0.0ms | Allocations: 128550)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-08 18:55:56 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.9ms | Allocations: 231)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 463)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 7441)
+
+

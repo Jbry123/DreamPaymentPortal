@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stripe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -31,11 +32,129 @@
           token = response.id;
           
           $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+          $form.append($('<input type="hidden" name="email" />').val(document.querySelector('#email').value));
+          $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
+          $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
+
+          document.querySelector('#Cvalue1').onclick = function(){ document.querySelector('#amount').value = document.querySelector('#Cvalue1').value};
+
           $form.get(0).submit();
         }
       };
       });
     </script>
+    <style>
+
+    @media (min-width: 1000px) {
+  .wrapper .option {
+    width: 85px !important;
+
+  }
+  .wrapper {
+    width: 225px !important;
+  }
+}  
+
+    @media (max-width: 900px) {
+      #mobile {
+        margin-top: 20px;
+        transform: scale(1.4) !important;
+      }
+    } 
+
+    .text-center {
+      margin-left: 50px;
+    }
+
+.wrapper {
+  display: inline-flex;
+  background: transparent;
+  height: 300px;
+  width: 278px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 0 !important;
+  flex-wrap: wrap;
+}
+.wrapper .option {
+  background: #fff;
+  height: 65px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50px;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50px;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#Cvalue1:checked:checked ~ .option-1,
+#Cvalue2:checked:checked ~ .option-2,
+#Cvalue3:checked:checked ~ .option-3,
+#Cvalue4:checked:checked ~ .option-4,
+#Cvalue5:checked:checked ~ .option-5,
+#Cvalue6:checked:checked ~ .option-6  {
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#Cvalue1:checked:checked ~ .option-1 .dot,
+#Cvalue2:checked:checked ~ .option-2 .dot,
+#Cvalue3:checked:checked ~ .option-3 .dot,
+#Cvalue4:checked:checked ~ .option-4 .dot,
+#Cvalue5:checked:checked ~ .option-5 .dot,
+#Cvalue6:checked:checked ~ .option-6 .dot  {
+  background: #fff;
+}
+#Cvalue1:checked:checked ~ .option-1 .dot::before,
+#Cvalue2:checked:checked ~ .option-2 .dot::before,
+#Cvalue3:checked:checked ~ .option-3 .dot::before,
+#Cvalue4:checked:checked ~ .option-4 .dot::before,
+#Cvalue5:checked:checked ~ .option-5 .dot::before,
+#Cvalue6:checked:checked ~ .option-6 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+#Cvalue1:checked:checked ~ .option-1 span,
+#Cvalue2:checked:checked ~ .option-2 span,
+#Cvalue3:checked:checked ~ .option-3 span,
+#Cvalue4:checked:checked ~ .option-4 span,
+#Cvalue5:checked:checked ~ .option-5 span,
+#Cvalue6:checked:checked ~ .option-6 span {
+  color: #fff;
+}
+
+
+    @import url("https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap");
+  </style>
   </head>
 
   <body>
