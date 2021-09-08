@@ -10278,3 +10278,61 @@ Processing by ChargesController#show as HTML
 Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 7751)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-15 23:57:57 +0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 526)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 260ms (Views: 251.3ms | ActiveRecord: 0.0ms | Allocations: 59373)
+
+
+Started GET "/" for ::1 at 2021-06-15 23:59:04 +0500
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/charges_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-06-15 23:59:15 +0500
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/usman/projects/guarded-lake-91678/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-06-16 00:22:08 +0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChargesController#new as HTML
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 511)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 185.0ms | ActiveRecord: 0.0ms | Allocations: 36916)
+
+
+Started GET "/" for ::1 at 2021-09-08 18:50:33 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.7ms | Allocations: 344)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 905)
+Completed 200 OK in 140ms (Views: 130.6ms | ActiveRecord: 0.0ms | Allocations: 39112)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-08 18:50:39 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 0.6ms | Allocations: 231)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 466)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 7440)
+
+
