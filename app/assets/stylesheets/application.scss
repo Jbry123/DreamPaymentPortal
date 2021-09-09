@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+
+
+
+.form-signin {
+	margin: 50px 0px 30px 0px;
+}
+
+.actions {
+	margin: 25px 0px 25px 0px;
+}
+
+.card-fields {
+    width: 100% !important;
+    border-radius: 10px !important;
+    border: none;
+    padding: 10px;
+}
+
+.card-fields-date {
+	width: unset !important;
+}
+.alert-info{
+	text-align: center;
+}
+.custom-logo {
+    width: 150px;
+	height: 100px;
+
+}
+.logo-div{
+	margin-top: 100px;
+}
+.site-footer>.site-info {
+    display: flex;
+    align-items: center;
+}
+.site-footer>.site-info .site-name {
+    text-transform: var(--branding--title--text-transform);
+    font-size: var(--branding--title--font-size);
+}
+.site-logo {
+    margin: calc(var(--global--spacing-vertical)/2)0;
+}
+.site-footer>.site-info .powered-by {
+    margin-top: initial;
+    margin-left: auto;
+}
+.footer-logo{
+	float: left;
+}
+.footer-power{
+	float: right;
+    margin-top: 50px;
+}
+.info-section{
+    background-color: #F7F7F7;
+    padding: 50px;
+}
+.heading{
+    color: #E670B5;
+    font-weight: 600;
+    text-align: left !important;
+}
+.hr{
+    border: 2px solid #E670B5;
+}
+.sub_text p{
+    float: left;
+    padding-top: 20px;
+}
+.donate_button{
+    width: 100%;
+    border-radius: 10px !important;
+    background: #E670B5 !important;
+    color: #FFFFFF;
+    padding: 20px !important;
+}
+.share_button{
+    width: 100%;
+    border-radius: 10px;
+    background: #FFFFFF !important;
+    color: #000000;
+    padding: 15px;
+}
+.left_align{
+    text-align: left !important;
+}

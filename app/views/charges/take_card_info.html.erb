@@ -1,0 +1,6 @@
+<% if cookies[:compaign] == "Shelbys-fund" %>
+  <%= render partial: "charges/Shelbys-fund/take_card_info" %>
+<% elsif cookies[:compaign] == "Saras-fund" %>
+    <%= render partial: "charges/Saras-fund/take_card_info" %>
+<% end %>
+
