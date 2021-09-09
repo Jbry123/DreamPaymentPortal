@@ -45,12 +45,16 @@
     </script>
     <style>
 
-    form input[type=text], form input[type=password], form input[type=email], form input[type=number], form input[type=url], form input[type=tel], form input[type=date], form input[type=time], form textarea {
+  label, input, textarea,  {
     border: solid #ea088c !important;
     border-radius: 12px;
     color: black !important;
     margin: 10px;
-}
+  }
+
+  #payment-form {
+    margin-right: "4%";
+  }
 
     @media (min-width: 1000px) {
   .wrapper .option {
@@ -69,9 +73,6 @@
       }
     } 
 
-    .text-center {
-      margin-left: 50px;
-    }
 
 .wrapper {
   display: inline-flex;
