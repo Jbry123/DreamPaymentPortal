@@ -15,7 +15,12 @@
  */
  @import "bootstrap";
 
-
+.field label {
+    border: solid #ea088c !important;
+    border-radius: 12px;
+    color: black !important;
+    margin: 10px;
+}
 
 .form-signin {
 	margin: 50px 0px 30px 0px;
