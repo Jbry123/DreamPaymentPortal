@@ -1,10 +1,10 @@
 <% if params[:compaign].present? %>
-  <% if params[:compaign] == "Shelbys-fund" %>
-    <% cookies[:compaign] = "Shelbys-fund" %>
-    <%= render partial: "welcome/Shelbys-fund" %>
-  <% elsif params[:compaign] == "Saras-fund" %>
+  <% if params[:compaign] == "shelbys-fund" %>
+    <% cookies[:compaign] = "shelbys-fund" %>
+    <%= render partial: "welcome/shelbys-fund" %>
+  <% elsif params[:compaign] == "saras-fund" %>
     <% cookies[:compaign] = "Saras-fund" %>
-    <%= render partial: "welcome/Saras-fund" %>
+    <%= render partial: "welcome/saras-fund" %>
   <% end %>
 <% else %>
   <%= render partial: "welcome/default" %>
