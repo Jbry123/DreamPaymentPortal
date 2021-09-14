@@ -10574,3 +10574,508 @@ Processing by Api::V1::CompaignsController#index as HTML
 Completed 200 OK in 3461ms (Views: 21.4ms | ActiveRecord: 3.5ms | Allocations: 52030)
 
 
+Started GET "/admin/" for ::1 at 2021-09-14 06:30:08 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 102.0ms | Allocations: 49648)
+Completed 200 OK in 111ms (Views: 105.5ms | ActiveRecord: 0.0ms | Allocations: 51793)
+
+
+Started GET "/admin/login" for ::1 at 2021-09-14 06:31:42 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 27ms (ActiveRecord: 4.5ms | Allocations: 9748)
+
+
+Started GET "/admin" for ::1 at 2021-09-14 06:31:42 +0500
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 40.1ms | Allocations: 19334)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 19830)
+
+
+Started GET "/admin" for ::1 at 2021-09-14 06:34:06 +0500
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 40.7ms | Allocations: 19274)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 19742)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:34:09 +0500
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.5ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 101.3ms | Allocations: 57429)
+Completed 200 OK in 157ms (Views: 109.4ms | ActiveRecord: 5.6ms | Allocations: 62744)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:34:25 +0500
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.4ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 113.9ms | Allocations: 48515)
+Completed 200 OK in 118ms (Views: 112.6ms | ActiveRecord: 2.8ms | Allocations: 49294)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:34:47 +0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.0ms | Allocations: 90882)
+
+
+  
+NoMethodError (undefined method `current_user' for #<Admin::CompaignsController:0x0000000003c5b1d0>
+Did you mean?  current_admin_user):
+  
+activeadmin (2.9.0) lib/active_admin/base_controller.rb:43:in `current_active_admin_user'
+activeadmin (2.9.0) lib/active_admin/base_controller/authorization.rb:75:in `active_admin_authorization'
+activeadmin (2.9.0) lib/active_admin/resource_controller/data_access.rb:200:in `apply_authorization_scope'
+activeadmin (2.9.0) lib/active_admin/resource_controller/data_access.rb:59:in `block in find_collection'
+activeadmin (2.9.0) lib/active_admin/resource_controller/data_access.rb:58:in `each'
+activeadmin (2.9.0) lib/active_admin/resource_controller/data_access.rb:58:in `find_collection'
+activeadmin (2.9.0) lib/active_admin/resource_controller/data_access.rb:44:in `collection'
+inherited_resources (1.13.0) lib/inherited_resources/actions.rb:7:in `index'
+activeadmin (2.9.0) lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (6.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:35:07 +0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.6ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 281.3ms | Allocations: 88015)
+Completed 200 OK in 303ms (Views: 283.7ms | ActiveRecord: 7.9ms | Allocations: 92220)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:35:55 +0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.9ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 291.0ms | Allocations: 88017)
+Completed 200 OK in 319ms (Views: 293.7ms | ActiveRecord: 7.9ms | Allocations: 92230)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:37:19 +0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (2.4ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 266.8ms | Allocations: 88035)
+Completed 200 OK in 298ms (Views: 272.2ms | ActiveRecord: 11.8ms | Allocations: 92235)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:38:15 +0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.8ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 252.3ms | Allocations: 87976)
+Completed 200 OK in 278ms (Views: 258.0ms | ActiveRecord: 7.3ms | Allocations: 92179)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:39:34 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 11.6ms | Allocations: 3445)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.6ms | Allocations: 7634)
+
+
+  
+ActionView::Template::Error (Webpacker can't find active_admin.js in /home/usman/projects/gentle-savannah-69533/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-63c1a36005680d06496b.js",
+  "application.js.map": "/packs/js/application-63c1a36005680d06496b.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-63c1a36005680d06496b.js"
+      ],
+      "js.map": [
+        "/packs/js/application-63c1a36005680d06496b.js.map"
+      ]
+    }
+  }
+}
+):
+    1: insert_tag renderer_for(:index)
+  
+webpacker (4.3.0) lib/webpacker/manifest.rb:79:in `handle_missing_entry'
+webpacker (4.3.0) lib/webpacker/manifest.rb:49:in `lookup!'
+webpacker (4.3.0) lib/webpacker/helper.rb:163:in `block in sources_from_manifest_entries'
+webpacker (4.3.0) lib/webpacker/helper.rb:163:in `map'
+webpacker (4.3.0) lib/webpacker/helper.rb:163:in `sources_from_manifest_entries'
+webpacker (4.3.0) lib/webpacker/helper.rb:72:in `javascript_pack_tag'
+arbre (1.4.0) lib/arbre/element.rb:182:in `method_missing'
+activeadmin (2.9.0) lib/active_admin/views/pages/base.rb:41:in `block (2 levels) in build_active_admin_head'
+/home/usman/.rbenv/versions/2.7.0/lib/ruby/2.7.0/set.rb:328:in `each_key'
+/home/usman/.rbenv/versions/2.7.0/lib/ruby/2.7.0/set.rb:328:in `each'
+activeadmin (2.9.0) lib/active_admin/views/pages/base.rb:40:in `block in build_active_admin_head'
+arbre (1.4.0) lib/arbre/context.rb:93:in `with_current_arbre_element'
+arbre (1.4.0) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+activeadmin (2.9.0) lib/active_admin/views/pages/base.rb:26:in `build_active_admin_head'
+activeadmin (2.9.0) lib/active_admin/views/pages/base.rb:8:in `build'
+arbre (1.4.0) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.4.0) lib/arbre/context.rb:93:in `with_current_arbre_element'
+arbre (1.4.0) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.4.0) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+activeadmin (2.9.0) app/views/active_admin/resource/index.html.arb:2
+arbre (1.4.0) lib/arbre/context.rb:46:in `instance_eval'
+arbre (1.4.0) lib/arbre/context.rb:46:in `initialize'
+activeadmin (2.9.0) app/views/active_admin/resource/index.html.arb:1:in `new'
+activeadmin (2.9.0) app/views/active_admin/resource/index.html.arb:1
+actionview (6.0.4) lib/action_view/base.rb:274:in `_run'
+actionview (6.0.4) lib/action_view/template.rb:185:in `block in render'
+activesupport (6.0.4) lib/active_support/notifications.rb:182:in `instrument'
+actionview (6.0.4) lib/action_view/template.rb:385:in `instrument_render_template'
+actionview (6.0.4) lib/action_view/template.rb:183:in `render'
+actionview (6.0.4) lib/action_view/renderer/template_renderer.rb:58:in `block (2 levels) in render_template'
+actionview (6.0.4) lib/action_view/renderer/abstract_renderer.rb:88:in `block in instrument'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `instrument'
+actionview (6.0.4) lib/action_view/renderer/abstract_renderer.rb:87:in `instrument'
+actionview (6.0.4) lib/action_view/renderer/template_renderer.rb:57:in `block in render_template'
+actionview (6.0.4) lib/action_view/renderer/template_renderer.rb:65:in `render_with_layout'
+actionview (6.0.4) lib/action_view/renderer/template_renderer.rb:56:in `render_template'
+actionview (6.0.4) lib/action_view/renderer/template_renderer.rb:13:in `render'
+actionview (6.0.4) lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+actionview (6.0.4) lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+actionview (6.0.4) lib/action_view/rendering.rb:117:in `block in _render_template'
+actionview (6.0.4) lib/action_view/base.rb:304:in `in_rendering_context'
+actionview (6.0.4) lib/action_view/rendering.rb:116:in `_render_template'
+actionpack (6.0.4) lib/action_controller/metal/streaming.rb:218:in `_render_template'
+actionview (6.0.4) lib/action_view/rendering.rb:103:in `render_to_body'
+actionpack (6.0.4) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (6.0.4) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (6.0.4) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (6.0.4) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (6.0.4) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/home/usman/.rbenv/versions/2.7.0/lib/ruby/2.7.0/benchmark.rb:308:in `realtime'
+activesupport (6.0.4) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+activerecord (6.0.4) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (3.0.1) lib/action_controller/responder.rb:240:in `default_render'
+responders (3.0.1) lib/action_controller/responder.rb:172:in `to_html'
+responders (3.0.1) lib/responders/flash_responder.rb:109:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+inherited_resources (1.13.0) lib/inherited_resources/actions.rb:7:in `index'
+activeadmin (2.9.0) lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (6.0.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4) lib/rails/engine.rb:527:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:41:21 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/usman/projects/gentle-savannah-69533/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 6415361d25a827d3f600
+Version: webpack 4.46.0
+Time: 2928ms
+Built at: 09/14/2021 6:41:27 AM
+                                      Asset       Size        Chunks                         Chunk Names
+    js/active_admin-9b5aad6b2473f2d60099.js   4.07 KiB  active_admin  [emitted] [immutable]  active_admin
+js/active_admin-9b5aad6b2473f2d60099.js.map   3.78 KiB  active_admin  [emitted] [dev]        active_admin
+     js/application-63c1a36005680d06496b.js    842 KiB   application  [emitted] [immutable]  application
+ js/application-63c1a36005680d06496b.js.map    898 KiB   application  [emitted] [dev]        application
+                              manifest.json  710 bytes                [emitted]              
+Entrypoint active_admin = js/active_admin-9b5aad6b2473f2d60099.js js/active_admin-9b5aad6b2473f2d60099.js.map
+Entrypoint application = js/application-63c1a36005680d06496b.js js/application-63c1a36005680d06496b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/active_admin.js] 176 bytes {active_admin} [built]
+[./app/javascript/packs/application.js] 769 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.6ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 5629.3ms | Allocations: 44553)
+Completed 200 OK in 5668ms (Views: 5639.6ms | ActiveRecord: 11.4ms | Allocations: 48766)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:41:38 +0500
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 8a6fa7b590a233a2b379
+Version: webpack 4.46.0
+Time: 2248ms
+Built at: 09/14/2021 6:41:43 AM
+                                      Asset       Size        Chunks                         Chunk Names
+    js/active_admin-de330e3d807013b81a41.js   4.37 KiB  active_admin  [emitted] [immutable]  active_admin
+js/active_admin-de330e3d807013b81a41.js.map   3.78 KiB  active_admin  [emitted] [dev]        active_admin
+     js/application-63c1a36005680d06496b.js    842 KiB   application  [emitted] [immutable]  application
+ js/application-63c1a36005680d06496b.js.map    898 KiB   application  [emitted] [dev]        application
+                              manifest.json  710 bytes                [emitted]              
+Entrypoint active_admin = js/active_admin-de330e3d807013b81a41.js js/active_admin-de330e3d807013b81a41.js.map
+Entrypoint application = js/application-63c1a36005680d06496b.js js/application-63c1a36005680d06496b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/active_admin.js] 164 bytes {active_admin} [built]
+[./app/javascript/packs/application.js] 769 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 111 hidden modules
+
+ERROR in ./app/javascript/packs/active_admin.js
+Module not found: Error: Can't resolve '../stylesheets/active_admin' in '/home/usman/projects/gentle-savannah-69533/app/javascript/packs'
+ @ ./app/javascript/packs/active_admin.js 3:0-37
+
+ERROR in ./app/javascript/packs/active_admin.js
+Module not found: Error: Can't resolve '@activeadmin/activeadmin' in '/home/usman/projects/gentle-savannah-69533/app/javascript/packs'
+ @ ./app/javascript/packs/active_admin.js 4:0-34
+
+
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (1.1ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 5752.4ms | Allocations: 34814)
+Completed 200 OK in 5756ms (Views: 5752.2ms | ActiveRecord: 2.2ms | Allocations: 35609)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:42:58 +0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.5ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 97.0ms | Allocations: 43192)
+Completed 200 OK in 119ms (Views: 100.3ms | ActiveRecord: 8.3ms | Allocations: 47391)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:43:15 +0500
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.4ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 82.7ms | Allocations: 33575)
+Completed 200 OK in 90ms (Views: 81.6ms | ActiveRecord: 3.0ms | Allocations: 34366)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-14 06:43:25 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.5ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 252.1ms | Allocations: 97962)
+Completed 200 OK in 275ms (Views: 256.4ms | ActiveRecord: 6.7ms | Allocations: 102171)
+
+
