@@ -2,6 +2,8 @@
   <%= render partial: "charges/Shelbys-fund/take_amount" %>
 <% elsif cookies[:campaign] == "Saras-fund" %>
   <%= render partial: "charges/Saras-fund/take_amount" %>
+  <% elsif cookies[:campaign] == "King-Kell-fund" %>
+      <%= render partial: "charges/King-Kell-fund/take_amount" %>
 <% end %>
 
 
