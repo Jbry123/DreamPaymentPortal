@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipient: MyString
+  artistName: MyString
+  bigGoal: MyString
+  bigProblem: MyString
+  paragraphText: MyString
+  moneyGoal: 1.5
+
+two:
+  recipient: MyString
+  artistName: MyString
+  bigGoal: MyString
+  bigProblem: MyString
+  paragraphText: MyString
+  moneyGoal: 1.5
