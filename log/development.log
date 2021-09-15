@@ -11271,3 +11271,93 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms | Allocations: 9519)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1962212902996599120)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddcampaignVideoToCompaign (20210915210552)
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210915210552"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddcampaignPhotoToCompaign (20210915210618)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210915210618"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1962212902996599120)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1962212902996599120)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCampaignPhotoToCompaigns (20210915210821)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "compaigns" ADD "campaignPhoto" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210915210821"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1962212902996599120)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1962212902996599120)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCampaignVideoToCompaigns (20210915210850)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "compaigns" ADD "campaignVideo" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210915210850"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1962212902996599120)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-16 02:09:52 +0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.7ms | Allocations: 344)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 949)
+Completed 200 OK in 118ms (Views: 112.5ms | ActiveRecord: 0.0ms | Allocations: 39184)
+
+
+Started GET "/admin/login" for ::1 at 2021-09-16 02:09:55 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 1.3ms | Allocations: 742)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 17.1ms | Allocations: 9020)
+Completed 200 OK in 75ms (Views: 53.8ms | ActiveRecord: 5.7ms | Allocations: 33935)
+
+
+Started POST "/admin/login" for ::1 at 2021-09-16 02:10:00 +0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9IXxiVAJ7Dq5pGo/jHSZueiJbFKDSkxIHHYfEmJKmcQdR8IzKJP3EurddlNd+FjovKsk10QBGypOxZiF+aQt3w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (5.9ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 275ms (ActiveRecord: 7.0ms | Allocations: 6788)
+
+
+Started GET "/admin" for ::1 at 2021-09-16 02:10:00 +0500
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 28.1ms | Allocations: 19524)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 20987)
+
+
+Started GET "/admin/compaigns" for ::1 at 2021-09-16 02:10:03 +0500
+Processing by Admin::CompaignsController#index as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "compaigns"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "compaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCompaign Load (0.9ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" ORDER BY "compaigns"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (Duration: 104.5ms | Allocations: 61596)
+Completed 200 OK in 120ms (Views: 105.2ms | ActiveRecord: 6.4ms | Allocations: 64775)
+
+
+Started GET "/admin/compaigns/1/edit" for ::1 at 2021-09-16 02:10:05 +0500
+Processing by Admin::CompaignsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompaign Load (0.4ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" WHERE "compaigns"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Compaign Load (0.0ms)[0m  [1m[34mSELECT "compaigns".* FROM "compaigns" WHERE "compaigns"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/edit.html.arb (Duration: 57.7ms | Allocations: 33464)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 0.4ms | Allocations: 36287)
+
+
