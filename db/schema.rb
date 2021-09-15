@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_09_14_010847) do
-=======
-ActiveRecord::Schema.define(version: 2021_04_05_132917) do
->>>>>>> 572e456c8e632dc3d94144dcbbb8104602ab77fc
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +41,6 @@ ActiveRecord::Schema.define(version: 2021_04_05_132917) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
   create_table "compaigns", force: :cascade do |t|
     t.string "recipient"
     t.string "artistName"
@@ -57,8 +52,6 @@ ActiveRecord::Schema.define(version: 2021_04_05_132917) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-=======
->>>>>>> 572e456c8e632dc3d94144dcbbb8104602ab77fc
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
