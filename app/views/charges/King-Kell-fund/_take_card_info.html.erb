@@ -10,18 +10,15 @@
         <div class="row">
         <div class="col-md-6">
                 <div>
-                    <img src="https://images.gofundme.com/NLlPGIuCOn3HN4P7WaZFx3ZjUs8=/1200x900/https://d2g8igdw686xgo.cloudfront.net/58631955_1626910134193243_r.jpeg" height="600"/>
+                    <img class="kingKellPhoto" src="https://www.dreammachineusa.org/wp-content/uploads/2021/09/thumbnail_kingkellphotos-2.jpg" height="600"/>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="info-section">
                     <h2 class="heading"> Payment Method</h2>
-                    <p class="left_align">Your donation will help Shelby</p>
+                    <p class="left_align">Your donation will help King Kell</p>
                     <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
                         <div class="left_align">
-                            <input type="radio" id="paypal" name="billing_method" value="Paypal">
-                            <label for="paypal">Paypal</label>
-                            <br />
                             <input type="radio" id="credit_or_debit" name="billing_method" value="Credit or Debit" checked="checked">
                             <label for="billing_method">Credit or Debit</label>
                             <br />
@@ -49,12 +46,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                 <label>
-                                    <input style="border-radius: 10px !important;" type="text" size="6" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+                                    <input type="text" size="2" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
                                 </label>
-                                <input type="text" size="6" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+                                <input type="text" size="4" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <input style="border-radius: 10px !important;" size="6" type="text" data-stripe="cvc" class="card-fields" width="100%" placeholder="CVC"/>
+                                    <input type="text" data-stripe="cvc" class="card-fields" width="100%" placeholder="CVC"/>
                                 </div>
                             </div>
                             <br />
@@ -79,3 +76,14 @@
   </div>
 </body>
 
+<style>
+.donate_button{
+  text-shadow: none !important;
+  background: #EA088C !important;
+}
+
+.kingKellPhoto {
+  max-height: 560px;
+  max-width: 400px;
+}
+</style>

@@ -12,20 +12,20 @@
       <div class="row">
         <div class="col-md-4 offset-md-4">
           <div class="field">
-            <label>
+            <label style="">
               <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
             </label>
           </div>
           <div class="field">
             <label>
-              <input type="text" data-stripe="cvc" class="card-fields" width="100%" placeholder="CVC"/>
+              <input type="text" size="6" data-stripe="cvc" class="card-fields" width="100%" placeholder="CVC"/>
             </label>
           </div>
           <div class="field">
             <label>
-              <input type="text" size="2" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+              <input type="text" size="6" style="border-radius: 10px !important;" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
             </label>
-              <input type="text" size="4" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+              <input type="text" size="6" style="border-radius: 10px !important;" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
           </div>
           <div class="field">
             <label>
@@ -43,14 +43,15 @@
             </label>
           </div>
         <div class="actions">
-        <button type="submit">Submit Payment</button>
+        <button style="margin: 0px; margin: 0px; background: #ea088c; border: none; font-family: var(--bs-font-sans-serif); font-weight: 500;" type="submit">Submit Payment</button>
+        </div>
+        <div style="margin: 20px;">
+          <h3>Is my Donation Secure?</h3>
+          <p>Yes we use industry standard SSL encryption to keep your information secure. We partner with Stripe, one of the most trusted payment handling companies. All your financial information is stored on Stripes PCI compliant servers, and it never touches ours.</p>
         </div>
       </div>
     </div>
   </div>
   <% end %>
 </body>
-<div class="container">
-  <div class="site-info"><div class="site-name"><div class="site-logo footer-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div></div><!-- .site-name --><div class="powered-by footer-power"> Proudly powered by <a href="https://wordpress.org/">WordPress</a>.</div><!-- .powered-by --></div>
-</div>
 

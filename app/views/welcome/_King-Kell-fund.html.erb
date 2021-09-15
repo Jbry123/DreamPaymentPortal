@@ -1,0 +1,52 @@
+
+  <body class="text-center">
+  <div class="logo-div">
+    <div class="site-logo"><a href="https://dreammachineusa.org/" class="custom-logo-link" rel="home"><img width="1150" height="711" src="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" class="custom-logo" alt="Dream Machine USA" srcset="https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png 1150w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-300x185.png 300w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-1024x633.png 1024w, https://dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare-768x475.png 768w" sizes="(max-width: 1150px) 100vw, 1150px"></a></div>
+  </div>
+    <div class="form-signin">
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="row">
+        <div class="col-md-6" style="display: flex; justify-content: center;">
+            <div>
+              <img class="kingKellPhoto" src="https://www.dreammachineusa.org/wp-content/uploads/2021/09/thumbnail_kingkellphotos-2.jpg" height="550"/>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-section">
+                    <h2 class="heading"> Name: Musco Makele Adams (King Kell)<br/> Big goal: Raise $30k for 1 years worth of rent <br/>Big Promblem: Aspiring Musician facing homelessness </h2>
+                    <p class="left_align">Musco and his girlfriend are currently facing homelessness, and we need to help them!
+                     His dream is to be a world famous singer, and despite the struggles he has been going through, he has not given up on his dream. His voice is amazing, and we know he will be a star! He works as a barista right now, but he does not have enough to actually get his own place. Lets help him avoid homelessness and allow him to chase his dream of changing the world through music!</p> 
+                    <p class="left_align">Please donate and help King Kell stay safe, we need your help!</p>
+                    <div  class="sub_text">
+                        <p>105 raised out of 30000 Goal</p> 
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                        <%= button_to "Donate", charge_path(:take_amount), :class => "donate_button", :method => :get %>
+                        <br />
+                </div>
+                <div><p style="font-size: 11px;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") is a charitable organization as described in 501(C)(3) of the Internal Revenue Code; EIN# 85-3606644 registered in the state of Nevada. In accordance with the Internal Revenue Service guidelines, dream machine ... maintains discretion and sole control over the use of all donated funds once a tax-deductible receipt is issued. All donations are non-refundable.
+                 Dream Machine Tour honors the donor’s written request for anonymity. Donors explicitly release Dream Machine USA  from any restrictions on how those are funds are spent. No goods or services were provided in return for any contribution. Contributions are generally tax-deductible to the limit allowed by law.</p></div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+
+<style>
+
+.donate_button{
+  text-shadow: none !important;
+  background: #EA088C !important;
+}
+
+.kingKellPhoto {
+  max-height: 560px;
+  max-width: 400px;
+}
+
+</style>

@@ -11079,3 +11079,173 @@ Processing by Admin::CompaignsController#index as HTML
 Completed 200 OK in 275ms (Views: 256.4ms | ActiveRecord: 6.7ms | Allocations: 102171)
 
 
+Started GET "/" for ::1 at 2021-09-16 01:02:23 +0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.9ms | Allocations: 359)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 917)
+Completed 200 OK in 150ms (Views: 140.1ms | ActiveRecord: 0.0ms | Allocations: 38907)
+
+
+Started GET "/admin/login" for ::1 at 2021-09-16 01:02:27 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 2.0ms | Allocations: 742)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 33.1ms | Allocations: 9020)
+Completed 200 OK in 112ms (Views: 81.5ms | ActiveRecord: 11.8ms | Allocations: 33930)
+
+
+Started GET "/admin/login" for ::1 at 2021-09-16 01:09:11 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 2.2ms | Allocations: 870)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 17.9ms | Allocations: 9731)
+Completed 500 Internal Server Error in 2013ms (ActiveRecord: 4.0ms | Allocations: 161814)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after '...rt "bootstrap";': expected 1 selector or at-rule, was "<<<<<<< HEAD"
+        on line 16:22 of app/assets/stylesheets/application.scss
+>>  @import "bootstrap";
+
+   ---------------------^
+):
+  
+app/assets/stylesheets/application.scss:16
+Started GET "/admin/login" for ::1 at 2021-09-16 01:09:45 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 96)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 6.4ms | Allocations: 5571)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.0ms | Allocations: 47859)
+
+
+  
+ActionView::Template::Error (Error: Invalid CSS after ".heading{": expected "}", was "<<<<<<< HEAD"
+        on line 80:10 of app/assets/stylesheets/application.scss
+>> .heading{
+
+   ---------^
+):
+  
+app/assets/stylesheets/application.scss:80
+Started GET "/admin/login" for ::1 at 2021-09-16 01:10:16 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 6.4ms | Allocations: 5536)
+Completed 200 OK in 3942ms (Views: 3940.2ms | ActiveRecord: 0.0ms | Allocations: 208934)
+
+
+Started GET "/" for ::1 at 2021-09-16 01:10:27 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1274)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2927)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <<<<<<< HEAD
+<% if params[:compaign].present? %>
+  <% if params[:compaign] == "Shelbys-fund" %>
+    <% cookies[:compaign] = "Shelbys-fund" %>
+    <%= render partial: "welcome/Shelbys-fund" %>
+  <% elsif params[:compaign] == "Saras-fund" %>
+    <% cookies[:compaign] = "Saras-fund" %>
+    <%= render partial: "welcome/Saras-fund" %>
+=======
+<% if params[:campaign].present? %>
+  <% if params[:campaign] == "Shelbys-fund" %>
+    <% cookies[:campaign] = "Shelbys-fund" %>
+    <%= render partial: "welcome/Shelbys-fund" %>
+  <% elsif params[:campaign] == "Saras-fund" %>
+    <% cookies[:campaign] = "Saras-fund" %>
+    <%= render partial: "welcome/Saras-fund" %>
+  <% elsif params[:campaign] == "King-Kell-fund" %>
+    <% cookies[:campaign] = "King-Kell-fund" %>
+    <%= render partial: "welcome/King-Kell-fund" %>
+>>>>>>> 572e456c8e632dc3d94144dcbbb8104602ab77fc
+  <% end %>
+<% else %>
+  <%= render partial: "welcome/default" %>
+<% end %>
+
+
+
+):
+1:    <<<<<<< HEAD
+2:    <% if params[:compaign].present? %>
+3:      <% if params[:compaign] == "Shelbys-fund" %>
+4:        <% cookies[:compaign] = "Shelbys-fund" %>
+5:        <%= render partial: "welcome/Shelbys-fund" %>
+6:      <% elsif params[:compaign] == "Saras-fund" %>
+7:        <% cookies[:compaign] = "Saras-fund" %>
+8:        <%= render partial: "welcome/Saras-fund" %>
+9:    =======
+10:    <% if params[:campaign].present? %>
+11:      <% if params[:campaign] == "Shelbys-fund" %>
+12:        <% cookies[:campaign] = "Shelbys-fund" %>
+13:        <%= render partial: "welcome/Shelbys-fund" %>
+14:      <% elsif params[:campaign] == "Saras-fund" %>
+15:        <% cookies[:campaign] = "Saras-fund" %>
+16:        <%= render partial: "welcome/Saras-fund" %>
+17:      <% elsif params[:campaign] == "King-Kell-fund" %>
+18:        <% cookies[:campaign] = "King-Kell-fund" %>
+19:        <%= render partial: "welcome/King-Kell-fund" %>
+20:    >>>>>>> 572e456c8e632dc3d94144dcbbb8104602ab77fc
+21:      <% end %>
+22:    <% else %>
+23:      <%= render partial: "welcome/default" %>
+24:    <% end %>
+  
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+app/views/welcome/index.html.erb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2021-09-16 01:12:19 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 1.0ms | Allocations: 307)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 787)
+Completed 200 OK in 901ms (Views: 899.4ms | ActiveRecord: 0.0ms | Allocations: 44495)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-16 01:13:33 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 6996)
+
+
+Started GET "/?compaign=Saras-fund" for ::1 at 2021-09-16 01:13:41 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Saras-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.4ms | Allocations: 122)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 202)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 6992)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-09-16 01:14:16 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 203)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 7009)
+
+
+Started GET "/admin/login" for ::1 at 2021-09-16 01:15:06 +0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 2.1ms | Allocations: 511)
+  Rendered /home/usman/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 11.9ms | Allocations: 6495)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 25361)
+
+
