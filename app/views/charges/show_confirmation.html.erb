@@ -1,9 +1,14 @@
-<% if cookies[:compaign].present? %>
-  <% if cookies[:compaign] == "Shelbys-fund" %>
-    <%= render partial: "charges/Shelbys-fund/show_confirmation" %>
-  <% elsif cookies[:compaign] == "Saras-fund" %>
+<% if cookies[:campaign].present? %>
+  <% if cookies[:campaign] == "Shelbys-fund" %>
+  <%= render partial: "charges/Shelbys-fund/show_confirmation" %>
+
+    <% elsif cookies[:campaign] == "Saras-fund" %>
     <%= render partial: "charges/Saras-fund/show_confirmation" %>
+
+      <% elsif cookies[:campaign] == "Tony-Rojas-fund" %>
+      <%= render partial: "charges/Tony-Rojas-fund/show_confirmation" %>
   <% end %>
+
 <% else %>
   <%= render partial: "charges/default_confirmation" %>
 <% end %>

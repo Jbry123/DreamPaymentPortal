@@ -2,7 +2,10 @@
 <html>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stripe</title>
+    <title>Dream Machine USA - Payments</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="https://www.dreammachineusa.org/wp-content/uploads/2021/06/cropped-DreamrFlowerOrange-e1622658998409-32x32.png" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -10,6 +13,7 @@
     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
+    console.log("hello im here");
       Stripe.setPublishableKey("<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>");
       $( document ).ready(function() {
         var stripeResponseHandler;
@@ -36,8 +40,6 @@
           $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
           $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
 
-          document.querySelector('#Cvalue1').onclick = function(){ document.querySelector('#amount').value = document.querySelector('#Cvalue1').value};
-
           $form.get(0).submit();
         }
       };
@@ -45,15 +47,28 @@
     </script>
     <style>
 
-    @media (min-width: 1000px) {
-  .wrapper .option {
-    width: 85px !important;
+  input, textarea  {
+    border: solid #ea088c !important;
+    border-radius: 12px;
+    color: black !important;
+    margin: 10px;
+  }
 
+  .field {
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
-  .wrapper {
-    width: 225px !important;
-  }
-}  
+
+
+    @media (min-width: 1000px) {
+      .wrapper .option {
+        width: 85px !important;
+
+      }
+      .wrapper {
+        width: 225px !important;
+      }
+    }  
 
     @media (max-width: 900px) {
       #mobile {
@@ -62,9 +77,6 @@
       }
     } 
 
-    .text-center {
-      margin-left: 50px;
-    }
 
 .wrapper {
   display: inline-flex;

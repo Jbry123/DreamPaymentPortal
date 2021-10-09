@@ -1,0 +1,2 @@
+class Compaign < ApplicationRecord
+end

@@ -1,7 +1,16 @@
-<% if cookies[:compaign] == "Shelbys-fund" %>
+<% if cookies[:campaign] == "Shelbys-fund" %>
   <%= render partial: "charges/Shelbys-fund/take_amount" %>
-<% elsif cookies[:compaign] == "Saras-fund" %>
+  
+<% elsif cookies[:campaign] == "Saras-fund" %>
   <%= render partial: "charges/Saras-fund/take_amount" %>
-<% end %>
+
+<% elsif cookies[:campaign] == "King-Kell-fund" %>
+  <%= render partial: "charges/King-Kell-fund/take_amount" %>
+
+<% elsif cookies[:campaign] == "Tony-Rojas-fund" %>
+  <%= render partial: "charges/Tony-Rojas-fund/take_amount" %>
+
+
+      <% end %>
 
 
