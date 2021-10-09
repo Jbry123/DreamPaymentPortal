@@ -38,8 +38,9 @@
           token = response.id;
           
           
-        
-          $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
+          if (document.querySelector('#amount')){
+            $form.append($('<input type="hidden" name="amount" />').val(document.querySelector('#amount').value));
+          }
           $form.append($('<input type="hidden" name="currency" />').val("usd"));
           $form.append($('<input type="hidden" name="stripeToken" />').val(token));
           $form.append($('<input type="hidden" name="description" />').val(document.querySelector('#email').value));

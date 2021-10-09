@@ -11448,3 +11448,80 @@ Processing by ChargesController#show as HTML
 Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 8425)
 
 
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-10-09 13:40:32 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 209)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 7072)
+
+
+Started GET "/?compaign=Shelbys-fund" for ::1 at 2021-10-09 13:41:58 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"compaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.8ms | Allocations: 312)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 20988.5ms | Allocations: 51667)
+Completed 200 OK in 21009ms (Views: 21007.8ms | ActiveRecord: 0.0ms | Allocations: 60115)
+
+
+Started GET "/?campaign=Shelbys-fund" for ::1 at 2021-10-09 13:42:24 +0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"campaign"=>"Shelbys-fund"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_Shelbys-fund.html.erb (Duration: 1.4ms | Allocations: 224)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3484.0ms | Allocations: 2718)
+Completed 200 OK in 3507ms (Views: 3504.8ms | ActiveRecord: 0.0ms | Allocations: 9583)
+
+
+Started GET "/charges/take_amount" for ::1 at 2021-10-09 13:42:40 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_amount"}
+  Rendering charges/take_amount.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_amount.html.erb (Duration: 1.0ms | Allocations: 270)
+  Rendered charges/take_amount.html.erb within layouts/application (Duration: 2.8ms | Allocations: 690)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 9142)
+
+
+Started POST "/save_amount" for ::1 at 2021-10-09 13:42:44 +0500
+Processing by ChargesController#save_amount as HTML
+  Parameters: {"authenticity_token"=>"zEcj5cHWJfINnXOgPfqkYRkAvB4a5HKQL8lkg5S8HLJ/3wOmT5kL88AnfJtZBk7HcruKSiXjTDSxvBQ1KqHpbw==", "amount"=>"200"}
+Redirected to http://localhost:3000/charges/take_card_info
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 491)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-10-09 13:42:44 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_card_info.html.erb (Duration: 1.0ms | Allocations: 327)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 1.9ms | Allocations: 749)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 7782)
+
+
+Started GET "/charges/take_card_info" for ::1 at 2021-10-09 13:43:57 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"take_card_info"}
+  Rendering charges/take_card_info.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_take_card_info.html.erb (Duration: 3.4ms | Allocations: 324)
+  Rendered charges/take_card_info.html.erb within layouts/application (Duration: 5.3ms | Allocations: 737)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 9208)
+
+
+Started POST "/charges" for ::1 at 2021-10-09 13:44:20 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"CdJeGV5JngaMmXwsC8wfG8hIUKxWYH3OBL9dcP/e3vJqxdxtRiA82cZtDoptPp8xKGRL19GHqgA6j+AaiN/j8g==", "billing_method"=>"Credit or Debit", "email"=>"usman.ghani720@gmail.com", "first_name"=>"Usman", "last_name"=>"Ghani", "name"=>"Usman Ghani", "country"=>"Pakistan", "postal_code"=>"5400", "description"=>"usman.ghani720@gmail.com", "currency"=>"usd", "stripeToken"=>"tok_1JibAFD0Bbu6JmPgbFt7Xpj4"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 1946ms (ActiveRecord: 0.0ms | Allocations: 3840)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-10-09 13:44:21 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/Shelbys-fund/_show_confirmation.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 3.1ms | Allocations: 550)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 7597)
+
+
