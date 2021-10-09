@@ -43,7 +43,8 @@
           }
           $form.append($('<input type="hidden" name="currency" />').val("usd"));
           $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-          $form.append($('<input type="hidden" name="description" />').val(document.querySelector('#email').value));
+          $form.append($('<input type="hidden" name="email" />').val(document.querySelector('#email').value));
+          $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
 
           $form.get(0).submit();
         }
