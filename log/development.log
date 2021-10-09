@@ -11361,3 +11361,90 @@ Processing by Admin::CompaignsController#edit as HTML
 Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 0.4ms | Allocations: 36287)
 
 
+Started GET "/" for ::1 at 2021-10-09 13:32:19 +0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 1.2ms | Allocations: 371)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1030)
+Completed 200 OK in 152ms (Views: 140.3ms | ActiveRecord: 0.0ms | Allocations: 39245)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:34:00 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.7ms | Allocations: 307)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 835)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 9276)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:34:38 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.8ms | Allocations: 307)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 831)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 9253)
+
+
+Started POST "/charges" for ::1 at 2021-10-09 13:35:40 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"Mrf9cYtr1dJzxMckhpv6xhB9aYULG68iEqDvqVjujcNRoH8FkwJ3DTkwtYLgaXrs8FFy/oz8eOwskFLDL++www==", "amount"=>"100", "currency"=>"usd", "source"=>"tok_1Jib1rD0Bbu6JmPgNb0I1XUx", "description"=>"usman.ghani720@gmail.com"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3274ms (ActiveRecord: 0.0ms | Allocations: 2147)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:35:43 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 7092)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:36:41 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 1.4ms | Allocations: 307)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 834)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 9264)
+
+
+Started POST "/charges" for ::1 at 2021-10-09 13:37:07 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"W9r5R3KENRde+7PqiWwI2HdAy+JEZchJswutLom8bbk4zXszau2XyBQPwUzvnojyl2zQmcOCH4eNOxBE/r1QuQ==", "amount"=>"100", "currency"=>"usd", "stripeToken"=>"tok_1Jib3HD0Bbu6JmPgSwrAl9d1", "description"=>"usman.ghani720@gmail.com"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1311ms (ActiveRecord: 0.0ms | Allocations: 2032)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:37:09 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 206)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 7095)
+
+
+Started GET "/" for ::1 at 2021-10-09 13:38:53 +0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_default.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 210)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 7231)
+
+
+Started POST "/charges" for ::1 at 2021-10-09 13:39:15 +0500
+Processing by ChargesController#create as HTML
+  Parameters: {"authenticity_token"=>"0x1fK6A6n4umjE1bcE9SLSWRp9ABA6PQFeZdo4rNubiwCt1fuFM9VOx4P/0WvdIHxb28q4bkdB4r1uDJ/cyEuA==", "amount"=>"100", "currency"=>"usd", "stripeToken"=>"tok_1Jib5LD0Bbu6JmPge4mCETj4", "description"=>"usman.ghani720@gmail.com"}
+Redirected to http://localhost:3000/charges/show_confirmation
+Completed 302 Found in 2082ms (ActiveRecord: 0.0ms | Allocations: 4339)
+
+
+Started GET "/charges/show_confirmation" for ::1 at 2021-10-09 13:39:17 +0500
+Processing by ChargesController#show as HTML
+  Parameters: {"id"=>"show_confirmation"}
+  Rendering charges/show_confirmation.html.erb within layouts/application
+  Rendered charges/_default_confirmation.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered charges/show_confirmation.html.erb within layouts/application (Duration: 1.7ms | Allocations: 556)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 8425)
+
+

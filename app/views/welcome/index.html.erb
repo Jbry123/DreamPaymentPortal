@@ -2,12 +2,18 @@
   <% if params[:campaign] == "Shelbys-fund" %>
     <% cookies[:campaign] = "Shelbys-fund" %>
     <%= render partial: "welcome/Shelbys-fund" %>
+
   <% elsif params[:campaign] == "Saras-fund" %>
     <% cookies[:campaign] = "Saras-fund" %>
     <%= render partial: "welcome/Saras-fund" %>
+
   <% elsif params[:campaign] == "King-Kell-fund" %>
     <% cookies[:campaign] = "King-Kell-fund" %>
     <%= render partial: "welcome/King-Kell-fund" %>
+
+  <% elsif params[:campaign] == "Tony-Rojas-fund" %>
+    <% cookies[:campaign] = "Tony-Rojas-fund" %>
+    <%= render partial: "welcome/Tony-Rojas-fund" %>
   <% end %>
 <% else %>
   <%= render partial: "welcome/default" %>
