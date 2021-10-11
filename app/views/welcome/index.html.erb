@@ -14,6 +14,10 @@
   <% elsif params[:campaign] == "Tony-Rojas-fund" %>
     <% cookies[:campaign] = "Tony-Rojas-fund" %>
     <%= render partial: "welcome/Tony-Rojas-fund" %>
+
+    <% elsif params[:campaign] == "Tony-Rojas-copy-fund" %>
+    <% cookies[:campaign] = "Tony-Rojas-copy-fund" %>
+    <%= render partial: "welcome/Tony-Rojas-copy-fund" %>
   <% end %>
 <% else %>
   <%= render partial: "welcome/default" %>
