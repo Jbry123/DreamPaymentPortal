@@ -27,7 +27,7 @@
     <div class="col-md-8 offset-md-2" style="margin: 0 !important;">
         <div class="row" style="margin: 0; width: 100%; justify-content: center !important;">
         <div class="col-md-6" style="display: flex; justify-content: center; flex-wrap: wrap;">
-          <h2 class="heading" style="text-align: center !important;"> Help us raise $50K to get Tony Rojas off the streets and to start his food truck business!<br/><br/> </h2>
+          <h2 class="heading" style="text-align: center !important; color: #201b58 !important;"> Help us raise $50K to get Tony Rojas off the streets and to start his food truck business!<br/><br/> </h2>
           <div>
             <img class="kingKellPhoto" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/Tony-Rojas-Chef-compressed.jpg" height="550"/>
           <div>
@@ -46,7 +46,7 @@
                     <p class="left_align" style="font-size: 20px; line-height: 1.4; color: #201b58; font-weight: 600;"><i>By contributing to Tony's fundraiser - you will receive a Rare Nacho NFTaco that will be given for free exclusively to campaign contributors(even if it's through venmo/cashapp/paypal, just provide your email and mention 'Tony Rojas'). The NFTs will be claimable right after the fundraiser is over, with details sent to the email you enter on the donation form.</i></p><br/><br/>
                     <%= button_to "Donate", charge_path(:take_card_info), :class => "donate_button", :method => :get %>
                     <div style="margin-top: 15px !important;">
-                    <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/21673868997672231217851178856374333744572367501662029782123536301434119137040"><button style="background: #95C83E !important;" class="donate_button">NFT on OpenSea
+                    <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/21673868997672231217851178856374333744572367501662029782123536301434119137040"><button style="" class="donate_button2">NFT on OpenSea
                                     </button></a></div>
     
                   </div>
@@ -109,6 +109,15 @@
   text-shadow: none !important;
   border: 0 !important;
   background: linear-gradient(92deg, #201b58, #020202) !important;
+
+}
+
+.donate_button2{
+  color: #fff !important;
+  font-size: 1.3rem !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #201b58, #020202) !important;
 
 }
 
