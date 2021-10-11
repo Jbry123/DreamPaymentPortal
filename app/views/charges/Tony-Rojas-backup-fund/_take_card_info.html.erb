@@ -1,27 +1,23 @@
-<head>
-<title>Dream Machine USA - Help us raise $50K to get Tony Rojas off the streets and into his food truck!</title>
-<link rel="icon" 
-      type="image/png" 
-      href="https://www.dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" />
-</head>
-  <body class="text-center" style="left: 12px; background-image: url(https://www.dreammachineusa.org/wp-content/uploads/2021/10/IMG_7531603456A0-1.jpeg);
-  background-size: cover;">
+
+  <body class="text-center" style="">
   <div id="fixedHeader" class="" style="display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   padding-left: 5%;
   padding-right: 5%;
   top: 0px;
-  background: #fff;
-  box-shadow: 0px 2px 15px;
-  z-index: 100 !important;">
-    <a href="https://www.dreammachineusa.org/" class="home_button_container" style="margin-right: 1%;">
-     <img class="stickyImg" style=" height: 95px; width: 200px;" src="https://dreammachineusaorg.stage.site/wp-content/uploads/2021/06/the-dream-machine-logo-rectangle-min.png">
+  background: #ffffff;
+  box-shadow: 2px 2px 20px;
+  z-index: 100;">
+    <img class="stickyImg" style=" height: 95px; width: 200px;" src="https://dreammachineusaorg.stage.site/wp-content/uploads/2021/06/the-dream-machine-logo-rectangle-min.png">
+    <a href="https://www.dreammachineusa.org/" class="home_button_container" style="margin-right: 15px !important;">
+      <button class="home_button">
+      HOME
+      </button>
     </a>
   </div>
-
     <div class="form-signin">
   </div>
   <div class="row" style="margin-top: 120px !important; overflow-x: hidden !important; --bs-gutter-x: 0 !important; --bs-gutter-y: 0 !important;">
@@ -34,29 +30,29 @@
 margin-top: 15px;
 color: #ea088c;
 font-weight: 600;
-">OTHER PAYMENT OPTIONS:</h3>
+">Other payment options:</h3>
     <h4 style="
 margin-top: 15px;
 margin-top: 15px;
-color: #201b58;
+color: #92C53C;
 font-weight: 600;
 ">Venmo: @DreamMachineUSA</h4><h4 style="
 margin-top: 15px;
 margin-top: 15px;
-color: #201b58;
+color: #92C53C;
 font-weight: 600;
 ">CashApp: $DreamMachineUSA</h4><h4 style="
 margin-top: 15px;
 margin-top: 15px;
-color: #201b58;
+color: #92C53C;
 font-weight: 600;
 ">PayPal: donate@dreammachineusa.org</h4></div>
             </div>
             <div class="col-md-6">
-                <div class="info-section" style="padding-top: 0 !important; background: transparent !important;">
+                <div class="info-section" style="padding-top: 0 !important; background: #fff !important;">
                 <br />    
-                <h2 class="heading" style="color: #EA088C; text-align: center !important;"> ENTER CARD DETAILS</h2>
-                    <p class="left_align" style="text-align: center !important; color: #201b58 !important;">Your donation will help Tony Rojas and his family</p>
+                <h2 class="heading" style="color: #EA088C; text-align: center !important;"> Enter card details</h2>
+                    <p class="left_align" style="text-align: center !important;">Your donation will help Tony Rojas and his family</p>
                     <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
                         <div class="left_align">
                             <br />
@@ -72,10 +68,11 @@ font-weight: 600;
                                 <div class="col-md-6">
                                     <input type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <input type="text" id="number" name="number" class="card-fields" placeholder="Phone Number"/>
                                 </div>
                             </div>
+                            <br />
                             <div style="    display: flex;
                             justify-content: center;">
           <img style="max-width: 275px !important; margin-top: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
@@ -126,63 +123,21 @@ text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") 
 </body>
 
 <style>
-
-
-.animated-progress {
-  width: 300px;
-  height: 30px;
-  border-radius: 5px;
-  margin: 20px 10px;
-  border: 1px solid rgb(189, 113, 113);
-  overflow: hidden;
-  position: relative;
+.donate_button{
+  text-shadow: none !important;
+  background: #EA088C !important;
 }
 
-.animated-progress span {
-  height: 100%;
-  display: block;
-  width: 0;
-  color: rgb(255, 251, 251);
-  line-height: 30px;
-  position: absolute;
-  text-align: end;
-  padding-right: 5px;
+form input[type=text]{
+    margin-bottom: 10px;
 }
-
-.progress-color span {
-  background-color: #EA088C;
-}
-
 
 .kingKellPhoto {
   max-height: 500px;
-    max-width: 400px;
-    border: solid 6px #201b58;
-    border-radius: 25px;
-}
-
-.heading {
-  color: #EA088C !important;
-}
-
-.donate_button{
-  color: #fff !important;
-  font-size: 1.3rem !important;
-  text-shadow: none !important;
-  border: 0 !important;
-  background: linear-gradient(92deg, #201b58, #020202) !important;
-
-}
-
-.donate_button2{
-  color: #fff !important;
-  font-size: 1.3rem !important;
-  text-shadow: none !important;
-  border: 0 !important;
-  background: linear-gradient(180deg, #201b58, #020202) !important;
-  width: 300px;
-  border-radius: 12px;
-  height: 52px;
+  max-width: 400px;
+  border: solid 6px #EA088C;
+  border-right-width: 10px;
+  border-radius: 35px 15px 35px 15px;
 }
 
 .home_button{
@@ -194,15 +149,4 @@ text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") 
   height: 60px;
   color: #fff;
 }
-
-.campaignPhoto {
-  max-height: 250px;
-  max-width: 500px;
-}
-
-
-form input[type=text]{
-    margin-bottom: 10px;
-}
-
 </style>
