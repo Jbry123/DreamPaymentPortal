@@ -46,7 +46,9 @@
           $form.append($('<input type="hidden" name="stripeToken" />').val(token));
           $form.append($('<input type="hidden" name="email" />').val(document.querySelector('#email').value));
           $form.append($('<input type="hidden" name="name" />').val(document.querySelector('#name').value));
-          $form.append($('<input type="hidden" name="number" />').val(document.querySelector('#number').value));
+          if (document.querySelector('#phone')){
+            $form.append($('<input type="hidden" name="phone" />').val(document.querySelector('#phone').value));
+          }
 
           $form.get(0).submit();
         }
