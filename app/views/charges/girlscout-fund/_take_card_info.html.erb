@@ -58,58 +58,71 @@ font-weight: 600;
                 <h2 class="heading" style="color: #EA088C; text-align: center !important;"> ENTER CARD DETAILS</h2>
                     <p class="left_align" style="text-align: center !important; color: #201b58 !important;">Your donation will help Tony Rojas and his family</p>
                     <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
-                        <div class="left_align">
-                            <br />
-                            <input style="padding-left: 20px !important;" type="text" id="amount" name="amount" class="card-fields" placeholder="Enter Amount"/>
-                            <span style=" position: relative; top: -44px; left: 10px; font-size: 16px;">$</span>
-                            <br />
-                            <input type="text" id="email" name="email" class="card-fields" placeholder="Email"/>
-                            <br />
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" id="first_name" name="first_name" class="card-fields" placeholder="First Name"/>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="text" id="number" name="number" class="card-fields" placeholder="Phone"/>
-                                </div>
-                            </div>
-                            <div style="    display: flex;
-                            justify-content: center;">
-          <img style="max-width: 275px !important; margin-top: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
-                            <input type="radio" id="billing_name" name="billing_name" value="Use as billing name">
-                            <br />
-                            <input type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
-                            <br />
-                            <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
-                            <br />
-                            <br />
-                            <div class="row">
-                                <div class="col-md-12" style="display: flex;
-                                justify-content: center; padding: 0px 10% 0 10% !important;">
-                                    <input style="margin-right: 10px; border-radius: 12px;" type="text" size="5" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
-                                    <input style=" border-radius: 12px; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
-                                    <input style="border-radius: 12px;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
 
-                                    </div>
-                                <div class="col-md-6">
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input style="border-radius: 12px;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
-                                </div>
-                                <div class="col-md-6">
-                                    <input style="border-radius: 12px;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
-                                </div>
-                            </div>
-                            <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
-                            <br />
-                            <br />
-                        </div>
+
+
+                      <div class="left_align">
+                      <br />
+                      <input style="padding-left: 20px !important;" type="text" id="amount" name="amount" class="card-fields" placeholder="Enter Amount"/>
+                      <span style=" position: relative; top: -44px; left: 10px; font-size: 16px;">$</span>
+                      <br />
+                      <label class="input-labels" for="email">Email</label>
+                      <br>
+                      <input type="text" id="email" name="email" class="card-fields" placeholder="Email"/>
+                      <br />
+                      <div class="row">
+                      <label class="input-labels">Name</label>
+                          <div class="col-md-6">
+                              <input type="text" id="first_name" name="first_name" class="card-fields" placeholder="First Name"/>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
+                          </div>
+                          <div class="col-md-12">
+                          <label class="input-labels" for="number">Phone Number</label>
+                          <br/>
+                              <input type="text" id="number" name="number" class="card-fields" placeholder="Phone"/>
+                          </div>
+                      </div>
+                      <div style="    display: flex;
+                      justify-content: center;">
+    <img style="max-width: 275px !important; margin-top: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
+                      <input type="radio" id="billing_name" name="billing_name" value="Use as billing name">
+                      <br />
+                      
+                      <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
+                      <br />
+                      <input type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
+                      <br />
+                      <br />
+                      <div class="row">
+                          <div class="col-md-12" style="display: flex;
+                          justify-content: center; padding: 0px 10% 0 10% !important;">
+                              <input style="margin-right: 10px; border-radius: 12px;" type="text" size="5" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+                              <input style=" border-radius: 12px; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+                              <input style="border-radius: 12px;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
+
+                              </div>
+                          <div class="col-md-6">
+                          </div>
+                      </div>
+                      <br />
+                      <div class="row">
+                          <div class="col-md-6">
+                              <input style="border-radius: 12px;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
+                          </div>
+                          <div class="col-md-6">
+                              <input style="border-radius: 12px;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                          </div>
+                      </div>
+                      <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
+                      <br />
+                      <br />
+                  </div>
+
+
+
+
                         <button type="submit" class="donate_button" style="border: 0;">Donate</button>
                     <% end %>
                 </div>
@@ -126,6 +139,20 @@ text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") 
 </body>
 
 <style>
+
+.card-fields{
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 8px 12px;
+  color: rgba(26,26,26,.9);
+  font-size: 16px;
+  line-height: 1.5;
+  border: 0;
+  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+  transition: box-shadow .08s ease-in,color .08s ease-in,filter 50000s;
+  background: #fff;
+}
 
 
 .animated-progress {
