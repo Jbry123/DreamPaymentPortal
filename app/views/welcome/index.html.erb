@@ -15,9 +15,14 @@
     <% cookies[:campaign] = "Tony-Rojas-fund" %>
     <%= render partial: "welcome/Tony-Rojas-fund" %>
 
-    <% elsif params[:campaign] == "Tony-Rojas-copy-fund" %>
+  <% elsif params[:campaign] == "Tony-Rojas-copy-fund" %>
     <% cookies[:campaign] = "Tony-Rojas-copy-fund" %>
     <%= render partial: "welcome/Tony-Rojas-copy-fund" %>
+  
+  <% elsif params[:campaign] == "stl-girlscout-fund" %>
+    <% cookies[:campaign] = "stl-girlscout-fund" %>
+    <%= render partial: "welcome/stl-girlscout-fund" %>
+
   <% end %>
 <% else %>
   <%= render partial: "welcome/default" %>
