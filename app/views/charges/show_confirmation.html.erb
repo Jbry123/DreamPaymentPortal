@@ -2,14 +2,21 @@
   <% if cookies[:campaign] == "Shelbys-fund" %>
   <%= render partial: "charges/Shelbys-fund/show_confirmation" %>
 
-    <% elsif cookies[:campaign] == "Saras-fund" %>
-    <%= render partial: "charges/Saras-fund/show_confirmation" %>
+  <% elsif cookies[:campaign] == "Saras-fund" %>
+  <%= render partial: "charges/Saras-fund/show_confirmation" %>
 
-      <% elsif cookies[:campaign] == "Tony-Rojas-fund" %>
-      <%= render partial: "charges/Tony-Rojas-fund/show_confirmation" %>
+  <% elsif cookies[:campaign] == "Tony-Rojas-fund" %>
+  <%= render partial: "charges/Tony-Rojas-fund/show_confirmation" %>
 
-      <% elsif cookies[:campaign] == "Tony-Rojas-copy-fund" %>
-      <%= render partial: "charges/Tony-Rojas-copy-fund/show_confirmation" %>
+  <% elsif cookies[:campaign] == "Tony-Rojas-copy-fund" %>
+  <%= render partial: "charges/Tony-Rojas-copy-fund/show_confirmation" %>
+
+  <% elsif cookies[:campaign] == "Tony-Rojas-copy-fund" %>
+  <%= render partial: "charges/Tony-Rojas-copy-fund/show_confirmation" %>
+
+  <% elsif cookies[:campaign] == "stl-girlscout-fund" %>
+  <%= render partial: "charges/stl-girlscout-fund/show_confirmation" %>
+
   <% end %>
 
 <% else %>
