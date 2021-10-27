@@ -1,0 +1,208 @@
+<head>
+<title>Dream Machine USA - Help us raise $50K to get Tony Rojas off the streets and into his food truck!</title>
+<link rel="icon" 
+      type="image/png" 
+      href="https://www.dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" />
+</head>
+  <body class="text-center" style="left: 12px; background-image: url(https://www.dreammachineusa.org/wp-content/uploads/2021/10/IMG_7531603456A0-1.jpeg);
+  background-size: cover;">
+  <div id="fixedHeader" class="" style="display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  padding-left: 5%;
+  padding-right: 5%;
+  top: 0px;
+  background: #fff;
+  box-shadow: 0px 2px 15px;
+  z-index: 100 !important;">
+    <a href="https://www.dreammachineusa.org/" class="home_button_container" style="margin-right: 1%;">
+     <img class="stickyImg" style=" height: 95px; width: 200px;" src="https://dreammachineusaorg.stage.site/wp-content/uploads/2021/06/the-dream-machine-logo-rectangle-min.png">
+    </a>
+  </div>
+
+    <div class="form-signin">
+  </div>
+  <div class="row" style="margin-top: 120px !important; overflow-x: hidden !important; --bs-gutter-x: 0 !important; --bs-gutter-y: 0 !important;">
+    <div class="col-md-8 offset-md-2" style="">
+        <div class="row">
+        <div class="col-md-6">
+        <div class="">
+        <img class="kingKellPhoto" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/Tony-Rojas-Chef-compressed.jpg" height="550">
+<h3 style="
+margin-top: 15px;
+color: #ea088c;
+font-weight: 600;
+">OTHER PAYMENT OPTIONS:</h3>
+    <h4 style="
+margin-top: 15px;
+margin-top: 15px;
+color: #201b58;
+font-weight: 600;
+">Venmo: @DreamMachineUSA</h4><h4 style="
+margin-top: 15px;
+margin-top: 15px;
+color: #201b58;
+font-weight: 600;
+">CashApp: $DreamMachineUSA</h4><h4 style="
+margin-top: 15px;
+margin-top: 15px;
+color: #201b58;
+font-weight: 600;
+">PayPal: donate@dreammachineusa.org</h4></div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-section" style="padding-top: 0 !important; background: transparent !important;">
+                <br />    
+                <h2 class="heading" style="color: #EA088C; text-align: center !important;"> ENTER CARD DETAILS</h2>
+                    <p class="left_align" style="text-align: center !important; color: #201b58 !important;">Your donation will help Tony Rojas and his family</p>
+                    <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
+                        <div class="left_align">
+                            <br />
+                            <input style="padding-left: 20px !important;" type="text" id="amount" name="amount" class="card-fields" placeholder="Enter Amount"/>
+                            <span style=" position: relative; top: -44px; left: 10px; font-size: 16px;">$</span>
+                            <br />
+                            <input type="text" id="email" name="email" class="card-fields" placeholder="Email"/>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="first_name" name="first_name" class="card-fields" placeholder="First Name"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" id="number" name="number" class="card-fields" placeholder="Phone"/>
+                                </div>
+                            </div>
+                            <div style="    display: flex;
+                            justify-content: center;">
+          <img style="max-width: 275px !important; margin-top: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
+                            <input type="radio" id="billing_name" name="billing_name" value="Use as billing name">
+                            <br />
+                            <input type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
+                            <br />
+                            <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
+                            <br />
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12" style="display: flex;
+                                justify-content: center; padding: 0px 10% 0 10% !important;">
+                                    <input style="margin-right: 10px; border-radius: 12px;" type="text" size="5" data-stripe="exp-month" class="card-fields-date" placeholder="MM"/>
+                                    <input style=" border-radius: 12px; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields-date" placeholder="YYYY"/>
+                                    <input style="border-radius: 12px;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
+
+                                    </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input style="border-radius: 12px;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input style="border-radius: 12px;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                                </div>
+                            </div>
+                            <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
+                            <br />
+                            <br />
+                        </div>
+                        <button type="submit" class="donate_button" style="border: 0;">Donate</button>
+                    <% end %>
+                </div>
+            </div>
+            <div style="
+"><p style="margin-right: 30px !important;
+margin-left: 40px !important;
+font-size: 11px;
+text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") is a charitable organization as described in 501(C)(3) of the Internal Revenue Code; EIN# 85-3606644 registered in the state of Nevada. In accordance with the Internal Revenue Service guidelines, dream machine ... maintains discretion and sole control over the use of all donated funds once a tax-deductible receipt is issued. All donations are non-refundable.
+                 Dream Machine Tour honors the donor's written request for anonymity. Donors explicitly release Dream Machine USA  from any restrictions on how those are funds are spent. No goods or services were provided in return for any contribution. Contributions are generally tax-deductible to the limit allowed by law.</p></div>
+        </div>
+    </div>
+  </div>
+</body>
+
+<style>
+
+
+.animated-progress {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  border: 1px solid rgb(189, 113, 113);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.progress-color span {
+  background-color: #EA088C;
+}
+
+
+.kingKellPhoto {
+  max-height: 500px;
+    max-width: 400px;
+    border: solid 6px #201b58;
+    border-radius: 25px;
+}
+
+.heading {
+  color: #EA088C !important;
+}
+
+.donate_button{
+  color: #fff !important;
+  font-size: 1.3rem !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  background: linear-gradient(92deg, #201b58, #020202) !important;
+
+}
+
+.donate_button2{
+  color: #fff !important;
+  font-size: 1.3rem !important;
+  text-shadow: none !important;
+  border: 0 !important;
+  background: linear-gradient(180deg, #201b58, #020202) !important;
+  width: 300px;
+  border-radius: 12px;
+  height: 52px;
+}
+
+.home_button{
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem !important;
+  text-shadow: none !important;
+  background: #95C83E !important;
+  height: 60px;
+  color: #fff;
+}
+
+.campaignPhoto {
+  max-height: 250px;
+  max-width: 500px;
+}
+
+
+form input[type=text]{
+    margin-bottom: 10px;
+}
+
+</style>
