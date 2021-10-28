@@ -84,23 +84,22 @@ font-weight: 600;
                               <input type="text" id="number" name="number" class="card-fields" placeholder=""/>
                           </div>
                       </div>
-                      <div style="    display: flex;
-                      justify-content: center;">
-    <img style="max-width: 275px !important; margin-top: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
-                      <input type="radio" id="billing_name" name="billing_name" value="Use as billing name">
+                      <div style="
+                      position: relative;
+                      display: flex;
+                      justify-content: center;
+                      ">
+                      <input style="border-radius: 6px !important;" type="text" data-stripe="number" class="card-fields" placeholder="Card Number"><img style="position: absolute;max-width: 105px !important;margin-top: 14px;right: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png"></div>
                       <br />
-                      
-                      <input type="text" data-stripe="number" class="card-fields" placeholder="Card Number"/>
-                      <br />
-                      <input type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
+                      <input style="border-radius: 6px !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
                       <br />
                       <br />
                       <div class="row">
                           <div class="col-md-12" style="display: flex;
                           justify-content: center; padding: 0px 10% 0 10% !important;">
-                              <input style="margin-right: 10px; border-radius: 6px;" type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM"/>
-                              <input style=" border-radius: 6px; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY"/>
-                              <input class="card-fields card-fields-date" style="border-radius: 6px;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
+                              <input style="margin-right: 10px; border-radius: 6px !important;" type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM"/>
+                              <input style=" border-radius: 6px !important; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY"/>
+                              <input class="card-fields card-fields-date" style="border-radius: 6px !important;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
 
                               </div>
                           <div class="col-md-6">
@@ -109,10 +108,10 @@ font-weight: 600;
                       <br />
                       <div class="row">
                           <div class="col-md-6">
-                              <input style="border-radius: 6px;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
+                              <input style="border-radius: 6px !important;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
                           </div>
                           <div class="col-md-6">
-                              <input style="border-radius: 6px;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                              <input style="border-radius: 6px !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
                           </div>
                       </div>
                       <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
