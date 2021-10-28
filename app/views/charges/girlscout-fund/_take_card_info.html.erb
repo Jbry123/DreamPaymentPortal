@@ -28,7 +28,7 @@
     <div class="col-md-8 offset-md-2" style="">
         <div class="row">
         <div class="col-md-6">
-        <div class="">
+        <div class="" style="padding: 10px;">
         <img class="kingKellPhoto" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/Tony-Rojas-Chef-compressed.jpg" height="550">
 <h3 style="
 margin-top: 15px;
@@ -84,30 +84,18 @@ font-weight: 600;
                               <input type="text" id="number" name="number" class="card-fields" placeholder=""/>
                           </div>
                       </div>
+                      <label class="input-labels" for="cardNumber">Card Number</label>
                       <div style="
                       position: relative;
                       display: flex;
                       justify-content: center;
                       ">
-                        <label class="input-labels" for="cardNumber">Card Number</label>
                         <input style="border-radius: 6px !important;" type="text" data-stripe="number" id="cardNumber" class="card-fields" placeholder="1234 1234 1234 1234">
                         <img style="position: absolute;max-width: 105px !important;margin-top: 14px;right: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png">
                       </div>
                       <input style="border-radius: 6px !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
                         <br />
                         <br />
-                      <div class="row">
-                          <div class="col-md-12" style="display: flex;
-                          justify-content: center; padding: 0px 10% 0 10% !important;">
-                              <input style="margin-right: 10px; border-radius: 6px !important;" type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM"/>
-                              <input style=" border-radius: 6px !important; margin-right: 10px;" type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY"/>
-                              <input class="card-fields card-fields-date" style="border-radius: 6px !important;" type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
-
-                              </div>
-                          <div class="col-md-6">
-                          </div>
-                      </div>
-                      <br />
                       
                       <div class="row">
                           <div class="col-md-12" style="
@@ -123,7 +111,14 @@ font-weight: 600;
                           <div class="col-md-6">
                           </div>
                       </div>
-
+                      <div class="row">
+                      <div class="col-md-6">
+                          <input style="border-radius: 6px !important;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
+                      </div>
+                      <div class="col-md-6">
+                          <input style="border-radius: 6px !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                      </div>
+                  </div>
 
                       <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
                       <br />
