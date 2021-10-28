@@ -4,8 +4,7 @@
       type="image/png" 
       href="https://www.dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" />
 </head>
-  <body class="text-center" style="left: 12px; background-image: url(https://www.dreammachineusa.org/wp-content/uploads/2021/10/IMG_7531603456A0-1.jpeg);
-  background-size: cover;">
+  <body class="text-center" style="left: 12px;">
   <div id="fixedHeader" class="" style="display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +52,7 @@ font-weight: 600;
 ">PayPal: donate@dreammachineusa.org</h4></div>
             </div>
             <div class="col-md-6">
-                <div class="info-section" style="padding-top: 0px; padding: 10px !important; background: white !important;box-shadow: 0px -10px 30px #00000080;margin-top: 50px;margin-bottom: 50px;">
+                <div class="info-section" style="padding-top: 0px; padding: 10px !important; background: white !important;margin-top: 50px;margin-bottom: 50px;">
                 <br />    
                 <h2 class="heading" style="color: #EA088C; text-align: center !important;"> ENTER CARD DETAILS</h2>
                     <p class="left_align" style="text-align: center !important; color: #201b58 !important;">Your donation will help Tony Rojas and his family</p>
@@ -95,13 +94,10 @@ font-weight: 600;
                       </div>
                       <input style="border-radius: 6px !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
                         <br />
-                        <br />
-                      
                       <div class="row">
                           <div class="col-md-12" style="
                           display: flex;
                           justify-content: center;
-                          padding: 15px 
                           ">
                               <input style="border-radius: 6px 0px 0px 6px !important;" type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM">
                               <input style="border-radius: 0px 0px 0px 0px !important; " type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY">
@@ -111,12 +107,14 @@ font-weight: 600;
                           <div class="col-md-6">
                           </div>
                       </div>
+                      <label for="description" class="input-labels">Country and ZIP
+                      </label>
                       <div class="row">
-                      <div class="col-md-6">
+                        <div class="col-md-6">
                           <input style="border-radius: 6px !important;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
-                      </div>
+                        </div>
                       <div class="col-md-6">
-                          <input style="border-radius: 6px !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                        <input style="border-radius: 6px !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
                       </div>
                   </div>
 
@@ -197,7 +195,7 @@ text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") 
 
 .kingKellPhoto {
   max-height: 500px;
-    max-width: 400px;
+    max-width: 300px;
     border: solid 6px #201b58;
     border-radius: 25px;
 }
