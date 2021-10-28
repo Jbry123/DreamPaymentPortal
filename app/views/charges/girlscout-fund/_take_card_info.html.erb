@@ -62,25 +62,25 @@ font-weight: 600;
 
                       <div class="left_align">
                       <br />
-                      <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" style="padding-left: 25px !important;" type="text" id="amount" name="amount" class="card-fields" placeholder="Enter Amount"/>
+                      <input style="padding-left: 25px !important;" type="text" id="amount" name="amount" class="card-fields" placeholder="Enter Amount"/>
                       <span style=" position: relative; top: -44px; left: 10px; font-size: 16px;">$</span>
                       <br />
                       <label class="input-labels" for="email">Email</label>
                       <br>
-                      <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="email" name="email" class="card-fields" placeholder=""/>
+                      <input type="text" id="email" name="email" class="card-fields" placeholder=""/>
                       <br />
                       <div class="row">
                       <label class="input-labels">Name</label>
                           <div class="col-md-6">
-                              <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="first_name" name="first_name" class="card-fields" placeholder="First Name"/>
+                              <input type="text" id="first_name" name="first_name" class="card-fields" placeholder="First Name"/>
                           </div>
                           <div class="col-md-6">
-                              <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
+                              <input type="text" id="last_name" name="last_name" class="card-fields" placeholder="Last Name"/>
                           </div>
                           <div class="col-md-12">
                           <label class="input-labels" for="number">Phone Number</label>
                           <br/>
-                              <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="number" name="number" class="card-fields" placeholder=""/>
+                              <input type="text" id="number" name="number" class="card-fields" placeholder=""/>
                           </div>
                       </div>
                       <label class="input-labels" for="cardNumber">Card Information</label>
@@ -91,7 +91,7 @@ font-weight: 600;
                       display: flex;
                       justify-content: center;
                       ">
-                        <input style="border-radius: 6px 6px 0px 0px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" data-stripe="number" id="cardNumber" class="card-fields" placeholder="1234 1234 1234 1234">
+                        <input style="border-radius: 6px 6px 0px 0px !important;" type="text" data-stripe="number" id="cardNumber" class="card-fields" placeholder="1234 1234 1234 1234">
                         <img style="position: absolute;max-width: 105px !important;margin-top: 14px;right: 10px;" src="https://www.dreammachineusa.org/wp-content/uploads/2021/10/credit-card-logos-transparent-eoRj.png">
                       </div>                        
                       <div class="row">
@@ -99,25 +99,25 @@ font-weight: 600;
                           display: flex;
                           justify-content: center;
                           ">
-                              <input style="border-radius: 0px 0px 0px 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;"  type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM">
-                              <input style="border-radius: 0px 0px 0px 0px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY">
-                              <input class="card-fields card-fields-date" style="border-radius: 0px 0px 6px 0px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" size="4" data-stripe="cvc" placeholder="CVC">
+                              <input style="border-radius: 0px 0px 0px 6px !important;" type="text" size="5" data-stripe="exp-month" class="card-fields card-fields-date" placeholder="MM">
+                              <input style="border-radius: 0px 0px 0px 0px !important; " type="text" size="5" data-stripe="exp-year" class="card-fields card-fields-date" placeholder="YYYY">
+                              <input class="card-fields card-fields-date" style="border-radius: 0px 0px 6px 0px !important;" type="text" size="4" data-stripe="cvc" placeholder="CVC">
 
                               </div>
                           <div class="col-md-6">
                           <label for="name" class="input-labels">Name on Card
                           </label>
-                          <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
+                          <input style="border-radius: 6px !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
                           </div>
                       </div>
                       <label for="description" class="input-labels">Country and ZIP
                       </label>
                       <div class="row">
                         <div class="col-md-6">
-                          <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
+                          <input style="border-radius: 6px !important;" type="text" id="country" name="country" class="card-fields" placeholder="US" value="US"/>
                         </div>
                       <div class="col-md-6">
-                        <input style="border-radius: 6px !important; box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
+                        <input style="border-radius: 6px !important;" type="text" id="postal_code" name="postal_code" class="card-fields" placeholder="Postal Code"/>
                       </div>
                   </div>
 
@@ -175,7 +175,8 @@ text-align: justify;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") 
   font-size: 16px !important;
   line-height: 1.5 !important;
   border: 0 !important;
-  box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%) !important;
+  box-shadow: 0px 0px 0px 1px black, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+  transition: box-shadow .08s ease-in,color .08s ease-in,filter 50000s !important;
   background: #fff;
 }
 
