@@ -23,7 +23,7 @@
 
     <div class="form-signin">
   </div>
-  <div class="row" style="margin-top: 120px !important; overflow-x: hidden !important; --bs-gutter-x: 0 !important; --bs-gutter-y: 0 !important;">
+  <div class="row" style="margin-top: 80px !important; overflow-x: hidden !important; --bs-gutter-x: 0 !important; --bs-gutter-y: 0 !important;">
     <div class="col-md-8 offset-md-2" style="">
         <div class="row">
         <div class="col-md-6">
@@ -57,7 +57,6 @@ font-weight: 600;
             </div>
             <div class="col-md-6">
                 <div class="info-section" style="padding-top: 0px; padding: 10px !important; background: white !important;margin-bottom: 50px;">
-                <br />    
                 <h2 class="heading" style="font-size: 20px !important; color: #EA088C; text-align: center !important;"> ENTER AMOUNT & CARD DETAILS</h2>
                     <p class="left_align" style="font-size: 14px !important; text-align: center !important; color: #201b58 !important;">Your donation will help Lyla McCarty and her family.</p>
                     <%= form_tag charges_path, method: 'post', id: 'payment-form' do %>
@@ -108,7 +107,7 @@ font-weight: 600;
                               <input class="card-fields card-fields-date" style="border-radius: 0px 0px 6px 0px !important;" type="text" size="4" data-stripe="cvc" placeholder="CVC">
 
                               </div>
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                           <label for="name" class="input-labels">Name on Card
                           </label>
                           <input style="border-radius: 6px !important;" type="text" id="name" name="name" class="card-fields" placeholder="Name on Card"/>
@@ -125,15 +124,13 @@ font-weight: 600;
                       </div>
                   </div>
 
-                      <input type="hidden" id="description" name="description" value="Tony Rojas Compaign"/>
-                      <br />
-                      <br />
+                      <input type="hidden" id="description" name="description" value="Lyla Campaign"/>
                   </div>
 
 
 
 
-                        <button type="submit" class="donate_button" style="border: 0;">Donate</button>
+                        <button type="submit" class="donate_button" style="border: 0; margin-top: 5px !important;">Donate</button>
                     <% end %>
                 </div>
             </div>
