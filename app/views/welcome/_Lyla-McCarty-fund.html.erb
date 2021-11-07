@@ -1,11 +1,26 @@
 <head>
-<title>HELP US RAISE 1 MILLION FOR LYLA MCCARTY AND THE MEDICAL HELP SHE NEEDS, TO START HER BAKING BUSINESS DREAM!
+<title>HELP US RAISE MONEY FOR LYLA MCCARTY AND THE MEDICAL HELP SHE NEEDS, TO START HER BAKING BUSINESS DREAM!
 </title>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-XXXX');</script>
+<script>function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("readMoreBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}</script>
 <link rel="icon" 
       type="image/png" 
       href="https://www.dreammachineusa.org/wp-content/uploads/2021/05/cropped-DreamMachineLogoSquare.png" />
@@ -34,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="row" style="margin: 0; width: 100%; justify-content: center !important;">
         <div class="col-md-12" style="display: flex; justify-content: center !important; flex-wrap: wrap;
         align-items: center !important;">
-          <h2 class="heading" style="text-align: center !important; color: #201b58 !important;">HELP US RAISE 1 MILLION DOLLARS TO GET LYLA MCCARTY THE MEDICAL HELP SHE NEEDS, AND START HER BAKING BUSINESS DREAM!<br><br> </h2>
+          <h2 class="heading" style="text-align: center !important; color: #201b58 !important;">HELP US RAISE MONEY TO GET LYLA MCCARTY THE MEDICAL HELP SHE NEEDS, AND START HER BAKING BUSINESS DREAM!<br><br> </h2>
           <div>
             
             <ul style="
@@ -67,6 +82,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <br />
                     <h4 class="left_align" style="font-size: 24px; line-height: 1.4; color: #201b58; font-weight: 600; text-align: center !important;"><u>THE STORY:</u></h4> 
 
+
+
                     <p class="left_align" style="font-size: 20px; line-height: 1.4; color: #201b58; font-weight: 600;">Lyla McCarty is an amazing 9 year old girl who suffers from CRPS: a super painful nerve condition that makes it almost impossible to live a normal life.
 
 
@@ -82,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
                     Her mom normally takes care of her, but she recently had to get a job at a hot dog shop to just try and help pay bills.</p> 
                     <p class="left_align" style="font-size: 20px; line-height: 1.4; color: #201b58; font-weight: 600;"><i>Lyla’s big Dream is to have her own baking business!! We are going to launch her business and sell cookies just in time for the holidays, so her family can afford all the treatment Lyla will need. Lyla will no longer have to feel the pain she feels, and her life will have purpose because her dream will become a reality.</i></p>
-                    <p class="left_align" style="font-size: 20px; line-height: 1.4; color: #201b58; font-weight: 600;">We need to change her life, and we need your help to raise 1 MILLION!</p>
+                    <p class="left_align" style="font-size: 20px; line-height: 1.4; color: #201b58; font-weight: 600;">We need to change her life, and we need your help to raise money for the medical bills.</p>
                     <br/><br/>
                     <div style="display: flex; justify-content: center;">
                     <%= button_to "Donate", charge_path(:take_card_info), :class => "donate_button", :method => :get %>
@@ -103,7 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <br />
                         <br />
                 </div>
-                <div><p style="font-size: 11px; text-align: justify; margin: 15px !important;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") is a charitable organization as described in 501(C)(3) of the Internal Revenue Code; EIN# 85-3606644 registered in the state of Nevada. In accordance with the Internal Revenue Service guidelines, dream machine ... maintains discretion and sole control over the use of all donated funds once a tax-deductible receipt is issued. All donations are non-refundable.
+                <div style="padding: 25px 300px !important"><p style="font-size: 18px; text-align: justify; margin: 15px !important; font-family: inherit; font-weight: 400;">Charlie Rocket's Dream Machine (the "Dream Machine Tour") is a charitable organization as described in 501(C)(3) of the Internal Revenue Code; EIN# 85-3606644 registered in the state of Nevada. In accordance with the Internal Revenue Service guidelines, dream machine ... maintains discretion and sole control over the use of all donated funds once a tax-deductible receipt is issued. All donations are non-refundable.
                  Dream Machine Tour honors the donor's written request for anonymity. Donors explicitly release Dream Machine USA  from any restrictions on how those are funds are spent. No goods or services were provided in return for any contribution. Contributions are generally tax-deductible to the limit allowed by law.</p></div>
             
                  <div class="Footer-PoweredBy" style="margin-bottom: 20px;"><a class="Link Link--primary" style="
@@ -121,11 +138,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <style>
+#more {display: none;}
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 349px) {
 .kingKellPhoto {
   max-height: 430px;
     max-width: 310px !important;
+
+}
+}
+
+@media only screen (min-width: 350px) and (max-width: 680px) {
+.kingKellPhoto {
+  max-height: 430px;
+    max-width: 325px !important;
 
 }
 }
