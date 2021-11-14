@@ -10,8 +10,11 @@
 <% elsif cookies[:campaign] == "Tony-Rojas-fund" %>
   <%= render partial: "charges/Tony-Rojas-fund/take_card_info" %>
 
-  <% elsif cookies[:campaign] == "Tony-Rojas-copy-fund" %>
+<% elsif cookies[:campaign] == "Tony-Rojas-copy-fund" %>
   <%= render partial: "charges/Tony-Rojas-copy-fund/take_card_info" %>
+
+<% elsif cookies[:campaign] == "Lyla-McCarty-fund" %>
+  <%= render partial: "charges/Lyla-McCarty-fund/take_card_info" %>
   
 <% end %>
 
